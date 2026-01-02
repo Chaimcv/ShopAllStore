@@ -5,14 +5,14 @@ const Test = () => {
     useEffect(()=>{
        product() 
     },[])
-//    const product=()=>{fetch('https://dummyjson.com/products')
-//               .then(res => res.json())
-//               .then(prod=>{
-//                 console.log(prod);
-//                 setData(prod);
+   const product=()=>{fetch('https://dummyjson.com/products')
+              .then(res => res.json())
+              .then(prod=>{
+                console.log(prod);
+                setData(prod);
                 
-//               })
-//             }
+              })
+            }
 console.log(data,"data");
         
 
