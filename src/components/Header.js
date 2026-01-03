@@ -4,9 +4,9 @@ import React from 'react'
 const Header = () => {
   return (
     <div className>
-      <div className='Black_header bg-black'></div>
+      <div className='bg-black h-3'></div>
       <div className='Header_items'>
-        <p><img src="./src/components/assets/search icon.png" alt="shop.co" />
+        <p><img src={require("./assets/SHOP.CO.png")} alt="shop.co" />
 
         </p>
       </div>
