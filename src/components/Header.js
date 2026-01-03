@@ -22,7 +22,7 @@ const Header = () => {
       </div>
       <div className="main">
         <div className="shop-text">
-          <h1 className="text font-extrabold">FIND PRODUCTS THAT MATCHES YOUR NEED</h1>
+          <h1 className="text font-extrabold h-[40%] w-[80%]">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
           <h3>Browse through our diverse range of products</h3>
           <button className="shop-btn bg-black ">Shop</button>
           <div className="Ratings flex grid grid-cols-3">
