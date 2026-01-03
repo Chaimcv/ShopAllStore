@@ -5,9 +5,10 @@ const Header = () => {
   return (
     <div className>
       <div className='bg-black h-7'></div>
-      <div className='Header_items p-3 mx-2 flex inline-block'>
+      <div className='Header_items p-3 mx-2 flex inline-block gap-5'>
         <img src={require("./assets/SHOP.CO.png")} alt="shop.co" />
-         <p><select name="show" defaultValue='shop'>
+         <p className='items gap-5'>
+          <select name="show" defaultValue='shop'>
           <option>Cosmetics</option>
            <option>Clothes</option>
             <option>Food items</option>
@@ -15,6 +16,9 @@ const Header = () => {
           <button>On Sale</button>
           <button>New Arrivals</button>
           <button>Brands</button>
+          <input type='text' placeholder='search'></input>
+           <img src={require("./assets/cart.png")} alt="shop.co" />
+            <img src={require("./assets/Frame (3).png")} alt="shop.co" />
         </p>
       </div>
     </div>
