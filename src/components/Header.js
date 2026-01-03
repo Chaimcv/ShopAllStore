@@ -3,10 +3,10 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <div className="bg-black h-7"></div>
-      <div className="Header_items p-3 flex grid grid-cols-7 ">
+      <div className="bg-black h-10"></div>
+      <div className="Header_items p-3 flex grid grid-cols-2 ">
         <img src={require("./assets/SHOP.CO.png")} alt="shop.co" />
-        <p className="items">
+        <p className="items flex grid grid-cols-7">
           <select name="show" defaultValue="shop">
             <option>Cosmetics</option>
             <option>Clothes</option>
