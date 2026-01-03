@@ -25,7 +25,7 @@ const Header = () => {
           <h1>FIND PRODUCTS THAT MATCHES YOUR NEED</h1>
           <h3>Browse through our diverse range of products</h3>
           <button className="shop-btn bg-black ">Shop</button>
-          <div className="Ratings">
+          <div className="Ratings flex grid grid-cols-3">
              <div><h1>200+</h1><br /><h5>International Brands</h5></div>
               <div><h1>2,000+</h1><br /><h5>High Quality products</h5></div>
                <div><h1>30,000+</h1><br /><h5>Happy Customers</h5></div>
