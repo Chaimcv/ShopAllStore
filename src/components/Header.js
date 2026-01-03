@@ -21,6 +21,13 @@ const Header = () => {
             <img src={require("./assets/Frame (3).png")} alt="shop.co" />
         </p>
       </div>
+      <div className='main'>
+        <div className='shop-text'>
+      </div>
+      <div className='image'>
+         <img src={require("./assets/Frame 128.png")} alt="shop.co" />
+      </div>
+</div>
     </div>
   )
 }
