@@ -4,9 +4,11 @@ const Header = () => {
   return (
     <>
       <div className="bg-black h-10"></div>
-      
-      <div className="Header_items p-3 flex grid grid-cols-2">
-        <div className="shopco-icon w-[30%]"><img src={require("./assets/SHOP.CO.png")}  alt="shop.co" /></div>
+
+      {/* large screen */}
+      <div className="Header_items hidden lg:block p-3 flex grid grid-cols-2">
+        <div className="shopco-icon w-[30%]">
+          <img src={require("./assets/SHOP.CO.png")}  alt="shop.co" /></div>
        <div> 
         <p className="items flex grid grid-cols-7">
           <select name="show" defaultValue="shop">
@@ -24,6 +26,14 @@ const Header = () => {
         </div>
       </div>
      
+      {/* small screen */}
+      <div className="Header_items lg:hidden">
+       <div className="shopco-icon w-[30%]"><img src={require("./assets/SHOP.CO.png")}  alt="shop.co" />
+       </div>
+       <div><input type="text" placeholder="search"></input>
+          <img src={require("./assets/cart.png")} alt="shop.co" />
+          <img src={require("./assets/Frame (3).png")} alt="shop.co" /></div>
+      </div>
 
 
       <div className="hero bg-#F2F0F1 flex grid grid-cols-2">
