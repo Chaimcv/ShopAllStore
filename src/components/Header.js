@@ -4,6 +4,7 @@ const Header = () => {
   return (
     <>
       <div className="bg-black h-10"></div>
+      
       <div className="Header_items p-3 flex grid grid-cols-2">
         <div className="shopco-icon w-[30%]"><img src={require("./assets/SHOP.CO.png")}  alt="shop.co" /></div>
        <div> 
@@ -22,6 +23,9 @@ const Header = () => {
         </p>
         </div>
       </div>
+     
+
+
       <div className="hero bg-#F2F0F1 flex grid grid-cols-2">
         <div className="shop-text  bg-[#F2F0F1]">
           <h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
