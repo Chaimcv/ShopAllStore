@@ -16,11 +16,14 @@ const Test = () => {
 console.log(data,"data");
   
   return (
-    <div className="bg-red-600 h-screen"> 
-     <p>ghhjj</p>
+    <div className="bg-red-600 h-screen flex grid grid-cols-4 mx-1"> 
       {data?.map((items)=>(
-        <p>{items?.title}</p>
-        // <Card item={items} /> 
+        <div className='card w-[70%] h-[70%] bg-green-500'>
+        <p className='title text-left font-semibold'>{items?.title}</p>
+       <img className="image w-[70%] h-[70%] align-middle"src={items?.image}></img>
+       <p>₹{items?.price}</p>
+ 
+        </div>
        ))}
     </div>
   )
