@@ -5,8 +5,8 @@ const Test = () => {
     useEffect(()=>{
        product() 
     },[])
-   const product=()=>{fetch('https://dummyjson.com/products')
-              .then(res => res.json())
+   const product=()=>{fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
               .then(prod=>{
                 console.log(prod);
                 setData(prod);
@@ -14,15 +14,12 @@ const Test = () => {
               })
             }
 console.log(data,"data");
-        
-
-
-         
+  
   return (
     <div className="bg-red-600 h-screen"> 
      <p>ghhjj</p>
-      {data.map((items)=>(
-        <p>{items.products}</p>
+      {data?.map((items)=>(
+        <p>{items?.title}</p>
         // <Card item={items} /> 
        ))}
     </div>
