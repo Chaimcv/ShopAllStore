@@ -8,9 +8,9 @@ const Header = () => {
         <img src={require("./assets/SHOP.CO.png")} alt="shop.co" />
         <p className="items flex grid grid-cols-7">
           <select name="show" defaultValue="shop">
-            <option>Cosmetics</option>
+            <option>Ornaments</option>
             <option>Clothes</option>
-            <option>Food items</option>
+            <option>Bags</option>
           </select>
           <button>On Sale</button>
           <button>New Arrivals</button>
