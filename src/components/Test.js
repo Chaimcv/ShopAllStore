@@ -16,7 +16,7 @@ const Test = () => {
     useEffect(()=>{
        product() 
     },[])
-   const product=()=>{fetch('https://fakestoreapi.com/products')
+   const product=()=>{fetch(`${url}/products`)
             .then(res=>res.json())
               .then(prod=>{
                 console.log(prod);

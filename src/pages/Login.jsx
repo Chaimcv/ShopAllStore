@@ -1,6 +1,12 @@
 import React from 'react'
 
 const Login = () => {
+
+    function loginFun(){
+        const email
+
+
+    }
   return (
     <div className='main flex grid grid-cols-2'>
         <div >
@@ -17,7 +23,7 @@ const Login = () => {
                 <div>
                     <input type='email' placeholder='Enter your email'></input>
                      <input type='password' placeholder='Password'></input>
-                     <button>Login</button>
+                     <button onClick={loginFun()}>Login</button>
                 </div>
             </div>
         </div>
