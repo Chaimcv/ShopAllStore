@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* small screen */}
 
-           <div className='additions sm:block md:flex lg:hidden  flex grid grid-rows-4 gap-1'>
+           <div className='sm:block md:flex lg:hidden  flex grid grid-rows-4 gap-1'>
             <ul className='company text-left'>
               <li className='company font-bold'>COMPANY</li>
                <li>About</li>
