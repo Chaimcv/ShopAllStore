@@ -16,19 +16,19 @@ const Details = () => {
      }
     // console.log(detail);
   return (
-    <div className='card flex grid grid-cols-2'>
-         <div>
-             <img className='product-image'>src={detail?.image}</img>
+    <div className='card flex grid grid-cols-2 '>
+         <div className='image bg-[#F0EEED] m-[10%]'>
+             <img className='product-image w-[50%] h-[50%] ]'src={detail?.image}></img>
             </div>   
-                <div className='bg-blue-500'key={detail.id}>
-                    <h2 className='title'>{detail?.title}</h2>
-                     <h4 className='rating'>{detail?.rating.rate}</h4>
+                <div className='bg-blue-500 m-[10%]'key={detail.id}>
+                    <h2 className='title font-extrabold'>{detail?.title}</h2>
+                     {/* <h4 className='rating'>{detail?.rating.rate}</h4> */}
                     <h3 className='category'>{detail?.category}</h3>
                     <p className='description'>{detail?.description}</p>
                    
                    
                     <h5 className='price'>₹{detail?.price}</h5>
-                    <button>Buy Now</button>
+                    <button className='cart-btn bg-black text-white'>Add to Cart</button>
                 </div>
 
             
