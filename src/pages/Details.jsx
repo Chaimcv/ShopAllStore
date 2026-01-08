@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { data, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Details = () => {
   const { id } = useParams();
@@ -40,9 +41,9 @@ const Details = () => {
         <br />
         <br />
 
-        <button className="cart-btn bg-black text-white rounded-xl w-[20%]">
+        <Link to="/cart"><button className="cart-btn bg-black text-white rounded-xl w-[20%]">
           Add to Cart
-        </button>
+        </button></Link>
       </div>
     </div>
   );

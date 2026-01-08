@@ -19,7 +19,10 @@ const Footer = () => {
              <h5 className='quotes w-[200%] text-left'>We have clothes that suits your style and which you're proud to wear and use.From women to men.</h5><br />
              <img src={require("./assets/Social.png")} alt="social-site" />
           </div>
-          <div className='additions flex grid grid-cols-4 gap-1'>
+
+
+          {/* large screen */}
+          <div className='additions sm:hidden md:hidden lg:grid flex grid grid-cols-4 gap-1'>
             <ul className='company text-left'>
               <li className='company font-bold'>COMPANY</li>
                <li>About</li>
@@ -49,6 +52,41 @@ const Footer = () => {
                   <li>Youtube Playlist</li>
             </ul>
           </div>
+
+          {/* small screen */}
+
+           <div className='additions sm:block md:flex lg:hidden  flex grid grid-rows-4 gap-1'>
+            <ul className='company text-left'>
+              <li className='company font-bold'>COMPANY</li>
+               <li>About</li>
+                <li>Features</li>
+                 <li>Works</li>
+                  <li>Career</li>
+            </ul>
+             <ul className='help text-left'>
+              <li className='help font-bold'>HELP</li>
+               <li>Customer Support</li>
+                <li>Delivery Details</li>
+                 <li>Terms & Conditions</li>
+                  <li>Privacy Policy</li>
+            </ul>
+             <ul className='faq text-left'>
+              <li className='faq font-bold'>FAQ</li>
+               <li>Accounts</li>
+                <li>Manage Deliveries</li>
+                 <li>ORders</li>
+                  <li>Payments</li>
+            </ul>
+             <ul className='resources text-left'>
+              <li className='resources font-bold'>RESOURCES</li>
+               <li>Free eBooks</li>
+                <li>Development Tutorial</li>
+                 <li>How to - Blog</li>
+                  <li>Youtube Playlist</li>
+            </ul>
+          </div>
+
+          {/* final section */}
 
         </div><br />
         <div className='final flex grid grid-cols-2 mx-[5%] mt-2'>
