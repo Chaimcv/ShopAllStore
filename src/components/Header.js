@@ -7,12 +7,13 @@ const Header = () => {
 
       {/* large screen */}
       <div className="Header_items hidden lg:block p-3 flex grid grid-cols-2">
-        <div className="shopco-icon w-[30%]">
-          <img src={require("./assets/SHOP.CO.png")}  alt="shop.co" /></div>
-       <div> 
+        <div className="shopco-icon w-[20%]">
+          <img src={require("./assets/SHOP.CO.png")}  alt="shop.co" />
+        </div>
+        <div className="w-auto"> 
         <p className="items flex grid grid-cols-7">
           <select name="show" defaultValue="shop">
-             <option>Shop</option>
+            <option>Shop</option>
             <option>Ornaments</option>
             <option>Clothes</option>
             <option>Bags</option>
