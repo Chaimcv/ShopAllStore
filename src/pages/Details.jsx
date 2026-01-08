@@ -14,22 +14,24 @@ const Details = () => {
   .then(data =>{ console.log(data);
            setDetail(data)});
      }
-    
+    // console.log(detail);
   return (
-    <div>
-        
-            {detail.map((item)=>(
-                <div className='bg-black'key={item.id}>
-                    <h2 className='title'>{item?.title}</h2>
-                    <h3 className='category'>{item?.category}</h3>
-                    <p className='description'>{item?.description}</p>
-                    <img className='product-image'>src={item?.image}</img>
-                    <h4 className='rating'>{item?.rating}</h4>
-                    <h5 className='price'>₹{item?.price}</h5>
+    <div className='card flex grid grid-cols-2'>
+         <div>
+             <img className='product-image'>src={detail?.image}</img>
+            </div>   
+                <div className='bg-blue-500'key={detail.id}>
+                    <h2 className='title'>{detail?.title}</h2>
+                     <h4 className='rating'>{detail?.rating.rate}</h4>
+                    <h3 className='category'>{detail?.category}</h3>
+                    <p className='description'>{detail?.description}</p>
+                   
+                   
+                    <h5 className='price'>₹{detail?.price}</h5>
                     <button>Buy Now</button>
                 </div>
 
-            ))};
+            
            
         
     </div>
