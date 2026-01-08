@@ -3,7 +3,7 @@ import React from 'react'
 const Login = () => {
 
     function loginFun(){
-        const email
+      
 
 
     }
