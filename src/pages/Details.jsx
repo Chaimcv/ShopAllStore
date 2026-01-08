@@ -23,9 +23,9 @@ const Details = () => {
                     <h2 className='title'>{item?.title}</h2>
                     <h3 className='category'>{item?.category}</h3>
                     <p className='description'>{item?.description}</p>
-                    <img className='product-image'>{item?.image}</img>
+                    <img className='product-image'>src={item?.image}</img>
                     <h4 className='rating'>{item?.rating}</h4>
-                    <h5 className='price'>{item?.price}</h5>
+                    <h5 className='price'>₹{item?.price}</h5>
                     <button>Buy Now</button>
                 </div>
 
