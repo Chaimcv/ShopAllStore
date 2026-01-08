@@ -26,6 +26,7 @@ const Details = () => {
                     <img className='product-image'>{item?.image}</img>
                     <h4 className='rating'>{item?.rating}</h4>
                     <h5 className='price'>{item?.price}</h5>
+                    <button>Buy Now</button>
                 </div>
 
             ))};
