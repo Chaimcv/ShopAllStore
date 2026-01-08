@@ -22,7 +22,7 @@ const Details = () => {
     <div className=" flex grid grid-cols-2 bg-green-900 h-screen w-screen  ">
       <div className="p-[10%]">
         <img
-          className=" w-[50%] h-[50%]  bg-red-600 "
+          className=" w-[50%] h-[50%]  bg-gray-400"
           src={detail?.image}
         ></img>
       </div>

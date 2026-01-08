@@ -48,7 +48,7 @@ console.log(data,"data");
       </div> */}
 
       {/* large screen */}
-      <div className="hidden lg:block flex grid-cols-2 w-full bg-green-700">
+      <div className="hidden lg:block  grid grid-cols-2 w-full bg-green-700">
 
         {/* <div><h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
           <h3 className="tet text-left ml-[10%]" >Browse through our diverse range of products</h3><br />
@@ -77,6 +77,7 @@ console.log(data,"data");
 
         </div>
       </div>
+
 
 
       {/* display */}
