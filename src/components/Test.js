@@ -29,6 +29,57 @@ const Test = () => {
 console.log(data,"data");
   
   return (
+    <>
+    {/* small screen */}
+      {/* <div className="hero  xs:flex grid-rows-1 md:flex grid grid-cols-1 lg:hidden">
+        <div className="shop-text  bg-[#F2F0F1]">
+          <h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left xs:text-[20px] md:text-[38px]">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
+          <h3 className="tet text-left ml-[10%]" >Browse through our diverse range of products</h3><br />
+          <button className="shop-btn bg-black text-white  h-[7%] w-[25%] border rounded-2xl flex justify-start ml-[10%] px-[5%] py-[1%]">Shop Now</button> <br />
+          <div className="Ratings flex  grid-cols-3 mt-2">
+             <div><h1 className="int-brands font-bold text-3xl">200+</h1><br /><h5>International Brands</h5></div>
+              <div><h1 className="int-brands font-bold text-3xl">2,000+</h1><br /><h5>High Quality products</h5></div>
+               <div><h1 className="int-brands font-bold text-3xl">30,000+</h1><br /><h5>Happy Customers</h5></div>
+          </div>
+        </div>
+        <div className="image ">
+          <img src={require("./assets/Frame 128.png")} alt="shop.co" />
+        </div>
+      </div> */}
+
+      {/* large screen */}
+      <div className="hidden lg:block flex grid-cols-2 w-full bg-green-700">
+
+        {/* <div><h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
+          <h3 className="tet text-left ml-[10%]" >Browse through our diverse range of products</h3><br />
+           <button className="shop-btn bg-black text-white  h-[7%] w-[25%] border rounded-2xl flex justify-start ml-[10%] px-[5%] py-[1%]">Shop Now</button> <br />
+           </div>
+        <div> <img src={require("./assets/Frame 128.png")} alt="shop.co" />
+        </div> */}
+
+
+        
+        <div className="shop-text  bg-[#F2F0F1] w-[50%]">
+          <h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
+          <h3 className="tet text-left ml-[10%]" >Browse through our diverse range of products</h3><br />
+          <button className="shop-btn bg-black text-white  h-[7%] w-[25%] border rounded-2xl flex justify-start ml-[10%] px-[5%] py-[1%]">Shop Now</button> <br />
+          <div className="Ratings flex grid grid-cols-3 mt-2">
+             <div><h1 className="int-brands font-bold text-3xl">200+</h1><br /><h5>International Brands</h5></div>
+              <div><h1 className="int-brands font-bold text-3xl">2,000+</h1><br /><h5>High Quality products</h5></div>
+               <div><h1 className="int-brands font-bold text-3xl">30,000+</h1><br /><h5>Happy Customers</h5></div>
+          </div>
+       </div>
+        <div className='w-[50%] bg-red-600'>
+      
+        </div> 
+        <div className=" bg-yellow-400 w-[50%]">
+          <img src={require("./assets/Frame 128.png")} className="h-[20%]" alt="shop.co" />
+
+        </div>
+      </div>
+
+
+      {/* display */}
     <div className="bg-white flex grid grid-cols-4 mx-[3%] my-[3%]"> 
       {data?.map((items)=>(
         <div className='card w-[95%] h-[95%] mx-auto bg-[#F2F0F1] mt-[1%]' key={items.id}>
@@ -41,9 +92,10 @@ console.log(data,"data");
         </div>
        ))}
     </div>
+    </>
   )
  
 }
 
 
-export default Test
+export default Test;

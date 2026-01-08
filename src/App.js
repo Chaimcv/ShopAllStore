@@ -15,7 +15,7 @@ function App() {
  
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       <BrowserRouter>
       <Routes>
         <Route path="/Test" element={<Test />} />
@@ -24,7 +24,7 @@ function App() {
       </Routes>
       </BrowserRouter>
     
-      {/* <Footer /> */}
+      <Footer />
 
     </div>
   );
