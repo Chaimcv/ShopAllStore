@@ -59,7 +59,7 @@ console.log(data,"data");
 
 
         
-        <div className="shop-text  bg-[#F2F0F1] w-[50%]">
+        <div className="shop-text  bg-[#F2F0F1]">
           <h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
           <h3 className="tet text-left ml-[10%]" >Browse through our diverse range of products</h3><br />
           <button className="shop-btn bg-black text-white  h-[7%] w-[25%] border rounded-2xl flex justify-start ml-[10%] px-[5%] py-[1%]">Shop Now</button> <br />
@@ -69,9 +69,7 @@ console.log(data,"data");
                <div><h1 className="int-brands font-bold text-3xl">30,000+</h1><br /><h5>Happy Customers</h5></div>
           </div>
        </div>
-        <div className='w-[50%] bg-red-600'>
-      
-        </div> 
+         
         <div className=" bg-yellow-400">
           <img src={require("./assets/Frame 128.png")} alt="shop.co" />
 
