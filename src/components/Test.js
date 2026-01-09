@@ -49,16 +49,6 @@ console.log(data,"data");
 
       {/* large screen */}
       <div className="hidden lg:grid  grid grid-cols-2 w-full bg-green-700">
-
-        {/* <div><h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
-          <h3 className="tet text-left ml-[10%]" >Browse through our diverse range of products</h3><br />
-           <button className="shop-btn bg-black text-white  h-[7%] w-[25%] border rounded-2xl flex justify-start ml-[10%] px-[5%] py-[1%]">Shop Now</button> <br />
-           </div>
-        <div> <img src={require("./assets/Frame 128.png")} alt="shop.co" />
-        </div> */}
-
-
-        
         <div className="shop-text  bg-[#F2F0F1]">
           <h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
           <h3 className="tet text-left ml-[10%]" >Browse through our diverse range of products</h3><br />
@@ -68,8 +58,7 @@ console.log(data,"data");
               <div><h1 className="int-brands font-bold text-3xl">2,000+</h1><br /><h5>High Quality products</h5></div>
                <div><h1 className="int-brands font-bold text-3xl">30,000+</h1><br /><h5>Happy Customers</h5></div>
           </div>
-       </div>
-         
+       </div> 
         <div>
           <img src={require("./assets/Frame 128.png")} alt="shop.co" />
 
