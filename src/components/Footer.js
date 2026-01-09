@@ -22,7 +22,7 @@ const Footer = () => {
 
 
           {/* large screen */}
-          <div className='additions sm:hidden md:hidden lg:grid flex grid grid-cols-4 gap-1'>
+          <div className='hidden lg:grid flex grid grid-cols-4 gap-1'>
             <ul className='company text-left'>
               <li className='company font-bold'>COMPANY</li>
                <li>About</li>
@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* small screen */}
 
-           <div className='sm:block md:flex lg:hidden  flex grid grid-rows-4 gap-1'>
+           <div className='lg:hidden  flex grid grid-rows-4 gap-1'>
             <ul className='company text-left'>
               <li className='company font-bold'>COMPANY</li>
                <li>About</li>
