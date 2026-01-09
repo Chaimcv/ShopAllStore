@@ -72,8 +72,8 @@ console.log(data,"data");
         <div className='w-[50%] bg-red-600'>
       
         </div> 
-        <div className=" bg-yellow-400 w-[50%]">
-          <img src={require("./assets/Frame 128.png")} className="h-[20%]" alt="shop.co" />
+        <div className=" bg-yellow-400">
+          <img src={require("./assets/Frame 128.png")} alt="shop.co" />
 
         </div>
       </div>
