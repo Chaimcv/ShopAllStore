@@ -70,7 +70,7 @@ console.log(data,"data");
           </div>
        </div>
          
-        <div className=" bg-yellow-400">
+        <div>
           <img src={require("./assets/Frame 128.png")} alt="shop.co" />
 
         </div>
