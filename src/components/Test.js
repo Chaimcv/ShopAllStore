@@ -30,8 +30,8 @@ console.log(data,"data");
   
   return (
     <>
-    {/* small screen */}
-      {/* <div className="hero  xs:flex grid-rows-1 md:flex grid grid-cols-1 lg:hidden">
+    {/* small screen  */}
+       <div className="hero  xs:flex grid-rows-1 md:flex grid grid-cols-1 lg:hidden">
         <div className="shop-text  bg-[#F2F0F1]">
           <h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left xs:text-[20px] md:text-[38px]">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
           <h3 className="tet text-left ml-[10%]" >Browse through our diverse range of products</h3><br />
@@ -45,10 +45,10 @@ console.log(data,"data");
         <div className="image ">
           <img src={require("./assets/Frame 128.png")} alt="shop.co" />
         </div>
-      </div> */}
+      </div>
 
       {/* large screen */}
-      <div className="hidden lg:block  grid grid-cols-2 w-full bg-green-700">
+      <div className="hidden lg:grid  grid grid-cols-2 w-full bg-green-700">
 
         {/* <div><h1 className="text font-extrabold h-[40%] w-[80%] text-5xl mt-10 mx-auto text-left">FIND PRODUCTS <br />THAT MATCHES <br />YOUR NEED</h1>
           <h3 className="tet text-left ml-[10%]" >Browse through our diverse range of products</h3><br />
