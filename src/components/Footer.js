@@ -17,6 +17,18 @@ const Footer = () => {
       </div>
 
       {/* small screen */}
+       <div className='subscriber_portal lg:hidden bg-black mx-[10%] flex grid grid-cols-1 m-[5%] border rounded-2xl'>
+         <div className='offer-div p-[10%]'>
+          <h2 className='offer text-white '>STAY UPTO DATE ABOUT OUR LATEST OFFERS </h2>
+         </div>
+         <div className='subscribe-portal m-[5%]'>
+         <input type='email'className='email border rounded-3xl w-[50%]' placeholder='  Enter your email address'></input> 
+         <br />
+         <button className='subscribe-btn bg-white text-black mt-1 border rounded-3xl w-[50%]'>Subscribe to Newsletter</button>
+          </div>
+      </div>
+
+
         <div className='additional_options flex grid grid-cols-2  ml-[5%]'>
           <div className='shop-co w-[40%]'>
              <img src={require("./assets/SHOP.CO.png")} alt="shop.co" /><br />
