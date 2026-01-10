@@ -29,6 +29,7 @@ const Footer = () => {
       </div>
 
 
+
         <div className='additional_options flex grid grid-cols-2  ml-[5%]'>
           <div className='shop-co w-[40%]'>
              <img src={require("./assets/SHOP.CO.png")} alt="shop.co" /><br />
