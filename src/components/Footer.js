@@ -3,6 +3,8 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='footer bg-[#F2F0F1]'>
+
+      {/* large screen */}
       <div className='subscriber_portal bg-black mx-[10%] flex grid grid-cols-2 m-[5%] border rounded-2xl'>
          <div className='offer-div p-[10%]'>
           <h2 className='offer text-white '>STAY UPTO DATE ABOUT OUR LATEST OFFERS </h2>
