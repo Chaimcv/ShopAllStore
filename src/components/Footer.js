@@ -15,6 +15,8 @@ const Footer = () => {
          <button className='subscribe-btn bg-white text-black mt-1 border rounded-3xl w-[50%]'>Subscribe to Newsletter</button>
           </div>
       </div>
+
+      {/* small screen */}
         <div className='additional_options flex grid grid-cols-2  ml-[5%]'>
           <div className='shop-co w-[40%]'>
              <img src={require("./assets/SHOP.CO.png")} alt="shop.co" /><br />
