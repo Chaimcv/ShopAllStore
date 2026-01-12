@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const Home = () => {
-  
+  const url=process.env.REACT_APP_API_URL;
   const[data,setData]=useState([]) ;
      useEffect(()=>{
         product() 
