@@ -90,6 +90,7 @@ console.log(data,"data");
        <p>₹{items?.price}</p>
        <Link to={`/details/${items.id}`}>View Details</Link>
          {/* <Link to="/details">View Details</Link> */}
+         
  
         </div>
        ))}
