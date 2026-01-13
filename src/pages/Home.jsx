@@ -16,6 +16,7 @@ const Home = () => {
       {kk.map((items)=>(
         <div className='main' key={items.id}>
         <p>{items?.tilte}</p>
+        <p>{items?.decription}</p>
        
         </div>
        ))}
