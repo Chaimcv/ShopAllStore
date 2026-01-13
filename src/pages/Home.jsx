@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '../components/Card';
 
 const Home = () => {
+  const[searchg,setSearch]=useState();
   function search(){
-    
+
   }
   const product=fetch('https://dummyjson.com/products')
               .then(res => res.json())
