@@ -2,7 +2,9 @@ import React, { useEffect } from 'react'
 import Card from '../components/Card';
 
 const Home = () => {
-  
+  function search(){
+    
+  }
   const product=fetch('https://dummyjson.com/products')
               .then(res => res.json())
               .then(product=>{
@@ -17,6 +19,7 @@ const Home = () => {
         <div className='main' key={items.id}>
         <p>{items?.tilte}</p>
         <p>{items?.decription}</p>
+        <button onClick={search}>search</button>
        
         </div>
        ))}
