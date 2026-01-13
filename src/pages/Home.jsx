@@ -14,8 +14,10 @@ const Home = () => {
     <div className="bg-red-600 h-screen"> 
     
       {kk.map((items)=>(
-        <p>{items}</p>
-        // <Card item={items} /> 
+        <div className='main' key={items.id}>
+        <p>{items?.tilte}</p>
+       
+        </div>
        ))}
     </div>
   )
