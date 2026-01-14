@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import axios, * as others from 'axios';
 
 const Login = () => {
 const url = process.env.REACT_APP_API_URL;
-const[log,setLog]=useState();
+const[logg,setLog]=useState();
   const credentials = { username: 'john_doe', password: 'pass123' };
 
   useEffect(()=>{
@@ -16,12 +17,20 @@ const[log,setLog]=useState();
   body: JSON.stringify(credentials)
    })
   .then(response => response.json())
-  .then(data =>{ console.log(data);
+  .then(data =>{ console.log(data,"dddata")
    setLog(data)} );
     
+
+ 
+// const credentials = { username: 'john_doe', password: 'pass123' };
+// axios.post('https://fakestoreapi.com/auth/login', credentials)
+//   .then(response => {console.log(response.data,"jjjjjjjjjj")
+//     setLog(response.data)
+//  });
+
   };
    
-console.log(log,"hhhhhh");
+console.log(logg,"hhhhhh");
 
   return (
     <div className='main flex grid grid-cols-2'>
@@ -37,9 +46,9 @@ console.log(log,"hhhhhh");
                   <img src={require("../components/assets/or.png")} alt="or-image" />
                  </div>
                 <div>
-                    <input type='email' placeholder='Enter your email'></input>
-                     <input type='password' placeholder='Password'></input>
-                     <button onClick={loginFun()}>Login</button>
+                    <input type='email' id='username' placeholder='Enter your email'></input>
+                     <input type='password' id='password' placeholder='Password'></input>
+                     <button onClick={loginFun}>Login</button>
                 </div>
             </div>
         </div>
