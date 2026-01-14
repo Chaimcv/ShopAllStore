@@ -6,7 +6,12 @@ const Cart = () => {
 //   const[icart,setCart]=useState([]);
 //    const url = process.env.REACT_APP_API_URL;
   
+//   useEffect(()=>{
+//     cartitems();
+//   },[]);
 
+
+//   console.log(icart,"hhhhhh");
   return (
     <div>
       {/* <div className='kk' key={icart.id}>
