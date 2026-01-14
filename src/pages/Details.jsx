@@ -8,7 +8,7 @@ const Details = () => {
   const url = process.env.REACT_APP_API_URL;
  const navigate=useNavigate();
  const[resdata,setResponse]=useState(); //for cart
- const[addbtn,setAddbtn]=useState(false);//on add to cart btn click -show success and redirect to test page
+ const[addbtn,setAddbtn]=useState();//on add to cart btn click -show success and redirect to test page
 
   const [detail, setDetail] = useState([]);//display details of selected pdt
   useEffect(() => {
@@ -33,14 +33,14 @@ cartHandler();
 
   const Added = () => {
     console.log("addedclicked");
-    setAddbtn(true);
-
-  
-  }
- if(resdata){
-    alert("success");
+ alert("success");
     navigate("/")
-   }
+
+  }
+//  if(resdata){
+//     alert("success");
+//     navigate("/")
+//    }
 
 const cart = { userId: 1, products: [{ id: {id} }] };
 
