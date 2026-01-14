@@ -1,12 +1,22 @@
 import React from 'react'
 
 const Login = () => {
+const url = process.env.REACT_APP_API_URL;
+
+  const credentials = { username: 'john_doe', password: 'pass123' };
+  fetch(`${url}/auth/login`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(credentials)
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
+
 
     function loginFun(){
-      
-
-
     }
+
+
   return (
     <div className='main flex grid grid-cols-2'>
         <div >

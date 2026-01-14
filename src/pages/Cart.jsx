@@ -16,10 +16,14 @@ const Cart = () => {
   //  .then(response =>{ console.log(response.data);
   //    setCart(response.data);});
 
-  fetch('https://fakestoreapi.com/carts')
-  .then(response => response.json())
-  .then(data =>{ console.log(data);
-   setCart(data);});
+const axios = require('axios');
+axios.get(`${url}/carts/{id}`)
+  .then(response => console.log(response.data));
+
+  // fetch('https://fakestoreapi.com/carts')
+  // .then(response => response.json())
+  // .then(data =>{ console.log(data);
+  //  setCart(data);});
   }
   console.log(icart,"hhhhhh");
   return (
