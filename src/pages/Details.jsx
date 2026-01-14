@@ -7,10 +7,10 @@ const Details = () => {
   const { id } = useParams();
   const url = process.env.REACT_APP_API_URL;
  const navigate=useNavigate();
- const[resdata,setResponse]=useState();
- const[addbtn,setAddbtn]=useState(false);
+ const[resdata,setResponse]=useState(); //for cart
+ const[addbtn,setAddbtn]=useState(false);//on add to cart btn click -show success and redirect to test page
 
-  const [detail, setDetail] = useState([]);
+  const [detail, setDetail] = useState([]);//display details of selected pdt
   useEffect(() => {
     productDetails();
   }, [id]);
