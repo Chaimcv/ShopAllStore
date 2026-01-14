@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { data, useParams } from "react-router-dom";
+import { data, useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import axios, * as others from 'axios';
+
 
 const Details = () => {
   const { id } = useParams();
   const url = process.env.REACT_APP_API_URL;
+ const navigate=useNavigate();
+ const[resdata,setResponse]=useState();
+ const[addbtn,setAddbtn]=useState(false);
 
   const [detail, setDetail] = useState([]);
   useEffect(() => {
@@ -20,6 +25,34 @@ const Details = () => {
       });
   };
   // console.log(detail);
+ 
+ useEffect(()=>{
+  if(addbtn){
+cartHandler();
+  }
+        },[addbtn]);
+
+  const Added = () => {
+    console.log("addedclicked");
+    setAddbtn(true);
+
+  
+  }
+ if(resdata){
+    alert("success");
+    navigate("/")
+   }
+
+const cart = { userId: 1, products: [{ id: {id} }] };
+
+  const cartHandler = () => {
+    axios.post('https://fakestoreapi.com/carts', cart)
+  .then(response =>{ console.log(response.data)
+    setResponse(response.data)
+  });
+}
+
+
   return (
     <div className=" flex grid grid-cols-2 bg-green-900 h-screen w-screen  ">
       <div className="p-[10%]">
@@ -42,9 +75,9 @@ const Details = () => {
         <br />
         <br />
 
-        <Link to="/cart"><button className="cart-btn bg-black text-white rounded-xl w-[20%]">
+        <button className="cart-btn bg-black text-white rounded-xl w-[20%]" onClick={Added}>
           Add to Cart
-        </button></Link>
+        </button>  
       </div>
     </div>
   );

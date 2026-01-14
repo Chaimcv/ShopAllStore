@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Test from './components/Test';
 import Details from './pages/Details';
 import Cart from './pages/Cart';
+import Login from './pages/Login';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/details/:id" element={<Details />} />
         <Route path="/cart" element={<Cart />} />
         <Route path='/home' element={<Home />} />
+        <Route path='/login' element={<Login />} />
        
       </Routes>
       </BrowserRouter>

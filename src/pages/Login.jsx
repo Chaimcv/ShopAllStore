@@ -1,21 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Login = () => {
 const url = process.env.REACT_APP_API_URL;
-
+const[log,setLog]=useState();
   const credentials = { username: 'john_doe', password: 'pass123' };
+
+  useEffect(()=>{
+  loginFun();
+  },[])
+ 
+ const loginFun = () => {
   fetch(`${url}/auth/login`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify(credentials)
-})
+   })
   .then(response => response.json())
-  .then(data => console.log(data));
-
-
-    function loginFun(){
-    }
-
+  .then(data =>{ console.log(data);
+   setLog(data)} );
+    
+  };
+   
+console.log(log,"hhhhhh");
 
   return (
     <div className='main flex grid grid-cols-2'>
