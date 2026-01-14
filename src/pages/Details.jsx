@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { data, useNavigate, useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import axios, * as others from 'axios';
 
 
