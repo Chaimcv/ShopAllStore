@@ -1,36 +1,65 @@
 import React, { useEffect, useState } from 'react'
-import axios, * as others from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-const url = process.env.REACT_APP_API_URL;
 const[logg,setLog]=useState();
-  const credentials = { username: 'john_doe', password: 'pass123' };
+const navigate=useNavigate();
+
+const[emailad,setEmail]=useState();
+const[passad,setpass]=useState();
 
   useEffect(()=>{
   loginFun();
   },[])
  
  const loginFun = () => {
-  fetch(`${url}/auth/login`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(credentials)
-   })
-  .then(response => response.json())
-  .then(data =>{ console.log(data,"dddata")
-   setLog(data)} );
-    
 
- 
-// const credentials = { username: 'john_doe', password: 'pass123' };
-// axios.post('https://fakestoreapi.com/auth/login', credentials)
-//   .then(response => {console.log(response.data,"jjjjjjjjjj")
-//     setLog(response.data)
-//  });
+console.log(emailad,"email");
+console.log(passad,"password");
+  fetch("https://dummyjson.com/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: emailad,   //value we type
+          password: passad,    //password we type
+          expiresInMins: 30, // optional, defaults to 60
+        }),
+      })
+        .then((res) => res.json())
+        .then((logg) =>{ 
+            console.log(logg,"datassssssss")
+
+            if(logg)
+      {
+      
+        if(logg?.accessToken)
+      {
+        localStorage.setItem("token",logg.accessToken);
+        navigate("/");
+      }
+      else{
+       navigate("/login");
+      }
+      
+       if(logg?.firstName && logg?.image)
+       {
+        const userdata={
+          "username":logg?.firstName,
+          "userimage":logg?.image
+        }
+        localStorage.setItem("userdata",JSON.stringify(userdata));
+
+       }
+      }
+      else{
+        alert("invalid");
+      }
+      
+        }
+        ) 
 
   };
    
-console.log(logg,"hhhhhh");
 
   return (
     <div className='main flex grid grid-cols-2'>
@@ -46,8 +75,8 @@ console.log(logg,"hhhhhh");
                   <img src={require("../components/assets/or.png")} alt="or-image" />
                  </div>
                 <div>
-                    <input type='email' id='username' placeholder='Enter your email'></input>
-                     <input type='password' id='password' placeholder='Password'></input>
+                    <input type='email'  value={emailad}  onChange={e=> setEmail(e.target.value)} placeholder='Enter your email'></input>
+                     <input type='password' value={passad} onChange={e => setpass(e.target.value)} placeholder='Password'></input>
                      <button onClick={loginFun}>Login</button>
                 </div>
             </div>

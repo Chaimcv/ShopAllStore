@@ -21,7 +21,7 @@ function App() {
   console.log(product,"iddd"); 
 const cartproduct=[
               {id:product.id,
-                name:product.name,
+                title:product.title,
                 image:product.image}
               ]; 
 setCart(prevState => [...prevState, ...cartproduct]);//appending data to cartproduct-array on each click
