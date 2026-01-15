@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { data, useNavigate, useParams } from "react-router-dom";
+import { data, Link, useNavigate, useParams } from "react-router-dom";
 import axios, * as others from 'axios';
 
 
@@ -31,12 +31,12 @@ cartHandler();
   }
         },[addbtn]);
 
-  const Added = () => {
-    console.log("addedclicked");
- alert("success");
-    navigate("/")
+//   const Added = () => {
+//     console.log("addedclicked");
+//  alert("success");
+//     navigate("/")
 
-  }
+//   }
 //  if(resdata){
 //     alert("success");
 //     navigate("/")
@@ -74,9 +74,9 @@ const cart = { userId: 1, products: [{ id: {id} }] };
         <br />
         <br />
 
-        <button className="cart-btn bg-black text-white rounded-xl w-[20%]" onClick={Added}>
+         <Link to={`/cart/${detail.id}`}><button className="cart-btn bg-black text-white rounded-xl w-[20%]">
           Add to Cart
-        </button>  
+        </button> </Link> 
       </div>
     </div>
   );
