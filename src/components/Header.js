@@ -3,6 +3,9 @@ import React from "react";
 const Header = ({cartdata,loginimage}) => {
   console.log(loginimage,"image");
   console.log(cartdata,"cartdata");
+
+  const number=cartdata.length;
+  console.log(number,"number");
   return (
     <>
       <div className="bg-black h-10"></div>
@@ -24,7 +27,7 @@ const Header = ({cartdata,loginimage}) => {
           <button>New Arrivals</button>
           <button>Brands</button>
           <input type="text" placeholder="search"></input>
-          <img src={require("./assets/cart.png")} alt="shop.co" />
+          <img src={require("./assets/cart.png")}  alt="shop.co" />{number}
           <img src={require("./assets/Frame (3).png")} alt="shop.co" />
         </p>
         </div>

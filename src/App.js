@@ -14,7 +14,6 @@ import { useState } from 'react';
 
 
 function App() {
-
  const[cart,setCart]=useState([]);
  //accessing data from test page on 'Add to cart' button click and saving it to array-cartproduct 
  const Addtocart=(product)=>{
@@ -28,18 +27,20 @@ setCart(prevState => [...prevState, ...cartproduct]);//appending data to cartpro
  };
  console.log(cart);
 
-
 //login section
-if(localStorage.getItem("token")){
+ const accessToken=localStorage.getItem('token');
 var user=JSON.parse(localStorage.getItem("userdata"));
-const displayuser=user?.userimage;
-console.log(displayuser,"displayuser");
-<Header loginimage={displayuser}/>
-}
+
+
+
 
   return (
     <div className="App">
-      <Header  cartdata={cart}/>  
+      {accessToken&&(
+     <Header  cartdata={cart} loginimage={displayuser}/>
+      )
+    }
+    
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Test Addtocart={Addtocart} />} />
