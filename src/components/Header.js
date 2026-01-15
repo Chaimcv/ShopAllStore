@@ -1,6 +1,7 @@
 import React from "react";
 
-const Header = ({cartdata}) => {
+const Header = ({cartdata,loginimage}) => {
+  console.log(loginimage,"image");
   console.log(cartdata,"cartdata");
   return (
     <>

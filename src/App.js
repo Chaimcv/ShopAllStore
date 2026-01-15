@@ -29,6 +29,14 @@ setCart(prevState => [...prevState, ...cartproduct]);//appending data to cartpro
  console.log(cart);
 
 
+//login section
+if(localStorage.getItem("token")){
+var user=JSON.parse(localStorage.getItem("userdata"));
+const displayuser=user?.userimage;
+console.log(displayuser,"displayuser");
+<Header loginimage={displayuser}/>
+}
+
   return (
     <div className="App">
       <Header  cartdata={cart}/>  
