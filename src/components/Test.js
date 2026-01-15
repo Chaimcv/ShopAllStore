@@ -13,7 +13,8 @@ const Test = ({Addtocart}) => {
 //   if(!accessToken){
 //         navigate("/Login");
 //   }
-const[selectedproduct,setSelectedproduct]=useState();
+
+
     const[data,setData]=useState([]) ;
     useEffect(()=>{
        product() 

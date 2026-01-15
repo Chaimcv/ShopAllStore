@@ -14,25 +14,24 @@ import { useState } from 'react';
 
 
 function App() {
+
  const[cart,setCart]=useState([]);
- //accessing data from test page 
+ //accessing data from test page on 'Add to cart' button click and saving it to array-cartproduct 
  const Addtocart=(product)=>{
-  console.log(product,"iddd");
-  
+  console.log(product,"iddd"); 
 const cartproduct=[
               {id:product.id,
                 name:product.name,
                 image:product.image}
-              ];
- 
-setCart(prevState => [...prevState, ...cartproduct]);
+              ]; 
+setCart(prevState => [...prevState, ...cartproduct]);//appending data to cartproduct-array on each click
  };
-
- 
  console.log(cart);
+
+
   return (
     <div className="App">
-      <Header  cartdata={cart}/>
+      <Header  cartdata={cart}/>  
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Test Addtocart={Addtocart} />} />
