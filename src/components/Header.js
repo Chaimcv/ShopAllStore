@@ -1,6 +1,7 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({cartdata}) => {
+  console.log(cartdata,"cartdata");
   return (
     <>
       <div className="bg-black h-10"></div>
