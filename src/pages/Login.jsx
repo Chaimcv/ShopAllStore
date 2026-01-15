@@ -38,7 +38,8 @@ console.log(passad,"password");
         navigate("/");
       }
       else{
-       navigate("/login");
+       alert("Incorrect credentials");
+      
       }
       
        if(logg?.firstName && logg?.image)
