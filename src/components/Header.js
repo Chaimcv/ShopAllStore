@@ -1,10 +1,13 @@
 import React from "react";
 
-const Header = ({cartdata,loginimage}) => {
-  console.log(loginimage,"image");
+const Header = ({cartdata,loginuser}) => {
+  console.log(loginuser,"loginuserdata");
   console.log(cartdata,"cartdata");
+  const test=loginuser.userimage;
 
-  const number=cartdata.length;
+  console.log(test,"ttttttt");
+
+  const number=cartdata.length;//to display the number of items in cart icon
   console.log(number,"number");
   return (
     <>
@@ -16,7 +19,7 @@ const Header = ({cartdata,loginimage}) => {
           <img src={require("./assets/SHOP.CO.png")}  alt="shop.co" />
         </div>
         <div className="w-auto"> 
-        <p className="items flex grid grid-cols-7">
+        <p className="items flex grid grid-cols-8">
           <select name="show" defaultValue="shop">
             <option>Shop</option>
             <option>Ornaments</option>
@@ -28,7 +31,8 @@ const Header = ({cartdata,loginimage}) => {
           <button>Brands</button>
           <input type="text" placeholder="search"></input>
           <img src={require("./assets/cart.png")}  alt="shop.co" />{number}
-          <img src={require("./assets/Frame (3).png")} alt="shop.co" />
+          <img src="{test}" alt="userimage" />
+          {/* <img src={require("./assets/Frame (3).png")} alt="shop.co" /> */}
         </p>
         </div>
       </div>

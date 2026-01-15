@@ -37,7 +37,7 @@ var user=JSON.parse(localStorage.getItem("userdata"));
   return (
     <div className="App">
       {accessToken&&(
-     <Header  cartdata={cart} loginimage={displayuser}/>
+     <Header  cartdata={cart} loginuser={user}/>
       )
     }
     

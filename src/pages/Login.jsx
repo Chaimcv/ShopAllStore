@@ -12,6 +12,8 @@ const[passad,setpass]=useState();
   loginFun();
   },[])
  
+ // login data===username: emilys ,password: emilyspass
+
  const loginFun = () => {
 
 console.log(emailad,"email");
@@ -38,8 +40,7 @@ console.log(passad,"password");
         navigate("/");
       }
       else{
-       alert("Incorrect credentials");
-      
+       navigate("/login");
       }
       
        if(logg?.firstName && logg?.image)
