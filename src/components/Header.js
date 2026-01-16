@@ -30,7 +30,7 @@ const Header = ({cartdata,loginuser}) => {
           <button>New Arrivals</button>
           <button>Brands</button>
           <input type="text" placeholder="search"></input>
-          <img src={require("./assets/cart.png")}  alt="shop.co" />{number}
+          <span className="w-[20%] h-[20%]"><img src={require("./assets/cart.png")}  alt="shop.co" />{number}</span>
           <img src="{test}" alt="userimage" />
           {/* <img src={require("./assets/Frame (3).png")} alt="shop.co" /> */}
         </p>
