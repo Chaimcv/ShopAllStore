@@ -53,7 +53,7 @@ const Login = () => {
 
   return (
     <div className="main flex grid grid-cols-2 ">
-      <div className="hidden lg-grid">
+      <div className="hidden lg-block">
         <img
           src={require("../components/assets/Illustration.png")}
           alt="loginpage-image"
