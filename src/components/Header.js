@@ -42,7 +42,8 @@ const Header = ({cartdata,loginuser}) => {
        <div className="shopco-icon w-[30%]"><img src={require("./assets/SHOP.CO.png")}  alt="shop.co" />
        </div>
        <div className="header2 flex grid-cols-3"><input type="text" placeholder="search"></input>
-          <img src={require("./assets/cart.png")} alt="shop.co" />
+         <span className="w-[20%] relative"><img src={require("./assets/cart.png")}  alt="shop.co" /><h6 className="border border-double  rounded-full w-6">{number}</h6></span>
+          <img src="{test}" alt="userimage" />
           <img src={require("./assets/Frame (3).png")} alt="shop.co" /></div>
       </div>
 
