@@ -37,13 +37,14 @@ var user=JSON.parse(localStorage.getItem("userdata"));
   return (
     <div className="App">
       {accessToken&&(
-     <Header  cartdata={cart} loginuser={user}/>
+     <Header  cartdata={cart} loginuser={user}/>  
       )
     }
     
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Test Addtocart={Addtocart} />} />
+         {/* sending Addtocart function to test as props */}
+        <Route path="/" element={<Test Addtocart={Addtocart} />} /> 
         <Route path="/details/:id" element={<Details />} />
         <Route path="/cart/:id" element={<Cart />} />
         <Route path='/home' element={<Home />} />

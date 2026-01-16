@@ -1,20 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Details from '../pages/Details';
-// import { useNavigate } from 'react-router-dom';
+
 import { Link } from 'react-router-dom';
 
-const Test = ({Addtocart}) => {
+const Test = ({Addtocart}) => {   //Addtocart accessed
 
  const url=process.env.REACT_APP_API_URL;
   console.log(url,"url");
  
-//  const navigate=useNavigate();
-//    const accessToken=false;
-//   if(!accessToken){
-//         navigate("/Login");
-//   }
-
-
     const[data,setData]=useState([]) ;
     useEffect(()=>{
        product() 
