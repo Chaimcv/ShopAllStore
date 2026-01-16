@@ -47,7 +47,7 @@ var user=JSON.parse(localStorage.getItem("userdata"));
          {/* sending Addtocart function to test as props */}
         <Route path="/" element={<Test Addtocart={Addtocart} />} /> 
         <Route path="/details/:id" element={<Details />} />
-        <Route path="/cart/:id" element={<Cart />} />
+        <Route path="/cart" element={<Cart Cartdisplay={cart}/>} />
         <Route path='/home' element={<Home />} />
         <Route path='/login' element={<Login />} />
        

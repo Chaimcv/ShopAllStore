@@ -3,19 +3,14 @@ import axios, * as others from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 
 
-const Cart = () => {
-  const {id}=useParams();
+const Cart = (Cartdisplay) => {
+  // const {id}=useParams();
    const url = process.env.REACT_APP_API_URL;
    const navigate=useNavigate();
-   const idArray=[];
-  //  idArray.push(id);
+   console.log(Cartdisplay,"cartdispaly")
+ 
 
-  // const UpdatedArray=[...idArray,id];
-  //  console.log( UpdatedArray);
-
-const UpdatedArray=idArray.concat(id);
- console.log( UpdatedArray);
- navigate("/");
+//  navigate("/");
 
 //   const[icart,setCart]=useState([]);
 //    const url = process.env.REACT_APP_API_URL;
