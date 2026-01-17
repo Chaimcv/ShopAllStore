@@ -4,7 +4,7 @@ import Card from '../components/Card';
 const Home = () => {
   const[searchg,setSearch]=useState();
   function search(){
-// not hhhhh
+// not 
   }
   const product=fetch('https://dummyjson.com/products')
               .then(res => res.json())
