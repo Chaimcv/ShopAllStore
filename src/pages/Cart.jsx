@@ -13,7 +13,7 @@ const Cart = (Cartdisplay) => {
 //  navigate("/");
 
 //   const[icart,setCart]=useState([]);
-//    const url = process.env.REACT_APP_API_URL;
+//   const url = process.env.REACT_APP_API_URL;
   
 //   useEffect(()=>{
 //     cartitems();
