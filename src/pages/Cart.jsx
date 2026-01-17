@@ -13,7 +13,6 @@ const Cart = (Cartdisplay) => {
 
 //   const[icart,setCart]=useState([]);
 //   const url = process.env.REACT_APP_API_URL;
-  
 //   useEffect(()=>{
 //     cartitems();
 //   },[]);
