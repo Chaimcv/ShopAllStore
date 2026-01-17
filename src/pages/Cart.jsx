@@ -8,7 +8,6 @@ const Cart = (Cartdisplay) => {
    const url = process.env.REACT_APP_API_URL;
    const navigate=useNavigate();
    console.log(Cartdisplay,"cartdispaly")
- 
 
 //  navigate("/");
 
