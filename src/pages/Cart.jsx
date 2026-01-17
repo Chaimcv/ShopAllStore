@@ -10,7 +10,6 @@ const Cart = (Cartdisplay) => {
    console.log(Cartdisplay,"cartdispaly")
 
 //  navigate("/");
-
 //   const[icart,setCart]=useState([]);
 //   const url = process.env.REACT_APP_API_URL;
 //   useEffect(()=>{
