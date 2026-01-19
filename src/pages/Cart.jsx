@@ -11,14 +11,8 @@ const Cart = () => {
   const cartitemsDisplay=useContext(Addingtocart)
   console.log(cartitemsDisplay,"cartitemsdisplay");
    const url = process.env.REACT_APP_API_URL;
-<<<<<<< HEAD
    
   
- 
-=======
-   const navigate=useNavigate();
-   console.log(Cartdisplay,"cartdispaly")
->>>>>>> ca927d7bef7e42c180283b52073f559ca738f109
 
 //  navigate("/");
 //   const[icart,setCart]=useState([]);
