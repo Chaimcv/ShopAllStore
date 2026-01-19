@@ -8,9 +8,9 @@ import Test from './components/Test';
 import Details from './pages/Details';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-
+export const Addingtocart=React.createContext()
 
 
 function App() {
@@ -37,17 +37,23 @@ var user=JSON.parse(localStorage.getItem("userdata"));
 
   return (
     <div className="App">
+
       {accessToken&&(
      <Header  cartdata={cart} loginuser={user}/>  
       )
     }
     
+    <Addingtocart.Provider value={cart}>
+      <Cart />
+      </Addingtocart.Provider>
       <BrowserRouter>
       <Routes>
          {/* sending Addtocart function to test as props */}
         <Route path="/" element={<Test Addtocart={Addtocart} />} /> 
+        <Route path="/" element={<Test />} />
         <Route path="/details/:id" element={<Details />} />
-        <Route path="/cart" element={<Cart Cartdisplay={cart}/>} />
+        {/* <Route path="/cart" element={<Cart Cartdisplay={cart}/>} /> */}
+
         <Route path='/home' element={<Home />} />
         <Route path='/login' element={<Login />} />
        

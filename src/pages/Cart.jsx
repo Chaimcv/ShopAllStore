@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useContext } from 'react'
 import axios, * as others from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
 
 
-const Cart = (Cartdisplay) => {
+import { Addingtocart } from '../App';
+
+
+const Cart = () => {
   // const {id}=useParams();
+
+  const cartitemsDisplay=useContext(Addingtocart)
+  console.log(cartitemsDisplay,"cartitemsdisplay");
    const url = process.env.REACT_APP_API_URL;
-   const navigate=useNavigate();
-   console.log(Cartdisplay,"cartdispaly")
+   
+  
  
 
 //  navigate("/");

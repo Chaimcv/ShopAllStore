@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { data, Link, useNavigate, useParams } from "react-router-dom";
-import axios, * as others from 'axios';
-
+import axios, * as others from "axios";
 
 const Details = () => {
   const { id } = useParams();
   const url = process.env.REACT_APP_API_URL;
- const navigate=useNavigate();
- const[resdata,setResponse]=useState(); //for cart
- const[addbtn,setAddbtn]=useState();//on add to cart btn click -show success and redirect to test page
+  const navigate = useNavigate();
+  const [resdata, setResponse] = useState(); //for cart
+  const [addbtn, setAddbtn] = useState(); //on add to cart btn click -show success and redirect to test page
 
-  const [detail, setDetail] = useState([]);//display details of selected pdt
+  const [detail, setDetail] = useState([]); //display details of selected pdt
   useEffect(() => {
     productDetails();
   }, [id]);
-   
+
   const productDetails = () => {
     fetch(`${url}/products/${id}`)
       .then((response) => response.json())
@@ -24,33 +23,32 @@ const Details = () => {
       });
   };
   // console.log(detail);
- 
- useEffect(()=>{
-  if(addbtn){
-cartHandler();
-  }
-        },[addbtn]);
 
-//   const Added = () => {
-//     console.log("addedclicked");
-//  alert("success");
-//     navigate("/")
+  useEffect(() => {
+    if (addbtn) {
+      cartHandler();
+    }
+  }, [addbtn]);
 
-//   }
-//  if(resdata){
-//     alert("success");
-//     navigate("/")
-//    }
+  //   const Added = () => {
+  //     console.log("addedclicked");
+  //  alert("success");
+  //     navigate("/")
 
-const cart = { userId: 1, products: [{ id: {id} }] };
+  //   }
+  //  if(resdata){
+  //     alert("success");
+  //     navigate("/")
+  //    }
+
+  const cart = { userId: 1, products: [{ id: { id } }] };
 
   const cartHandler = () => {
-    axios.post('https://fakestoreapi.com/carts', cart)
-  .then(response =>{ console.log(response.data)
-    setResponse(response.data)
-  });
-}
-
+    axios.post("https://fakestoreapi.com/carts", cart).then((response) => {
+      console.log(response.data);
+      setResponse(response.data);
+    });
+  };
 
   return (
     <div className=" flex grid grid-cols-2 bg-green-900 h-screen w-screen  ">
@@ -69,14 +67,18 @@ const cart = { userId: 1, products: [{ id: {id} }] };
         <h3 className="category">Category:{detail?.category}</h3>
         <br />
         <br />
-        <p className="description text-red-700 font-semibold">{detail?.description}</p>
+        <p className="description text-red-700 font-semibold">
+          {detail?.description}
+        </p>
         <br />
         <br />
         <br />
 
-         <Link to={`/cart/${detail.id}`}><button className="cart-btn bg-black text-white rounded-xl w-[20%]">
-          Add to Cart
-        </button> </Link> 
+        <Link to={`/cart/${detail.id}`}>
+          <button className="cart-btn bg-black text-white rounded-xl w-[20%]">
+            Add to Cart
+          </button>{" "}
+        </Link>
       </div>
     </div>
   );
