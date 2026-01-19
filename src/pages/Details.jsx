@@ -73,8 +73,8 @@ const Details = () => {
         <br />
         <br />
         <br />
-
-        <Link to={`/cart/${detail.id}`}>
+        <Link to="/cart">
+        {/* <Link to={`/cart/${detail.id}`}> */}
           <button className="cart-btn bg-black text-white rounded-xl w-[20%]">
             Add to Cart
           </button>{" "}

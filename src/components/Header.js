@@ -1,9 +1,9 @@
 import React, { use } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Cart from "../pages/Cart";
 import { Link } from "react-router-dom";
 
-import { useNavigate } from "react-router-dom";
 
 const Header = ({ cartdata, loginuser }) => {
   console.log(loginuser, "loginuserdata");
@@ -15,10 +15,10 @@ const Header = ({ cartdata, loginuser }) => {
   const number = cartdata.length; //to display the number of items in cart icon
   console.log(number, "number");
 
-  // const navigate=useNavigate();
-  // const cartbtn=()=>{
-  //   navigate("/cart");
-  // };
+  const navigate=useNavigate();
+  const cartbtn=()=>{
+    navigate("/cart");
+  };
 
   return (
     <>
@@ -42,10 +42,11 @@ const Header = ({ cartdata, loginuser }) => {
             <button>Brands</button>
             <input type="text" placeholder="search"></input>
             <span className="w-[20%] relative">
-              {/* <Link to="/cart/"> */}
-              {/* <button onClick={()=>cartbtn}> */}
-                <img src={require("./assets/cart.png")} alt="shop.co" />
-                {/* </button> */}
+              {/* <Link to="/cart"> */}
+              <button onClick={()=>cartbtn}>
+               <img src={require("./assets/cart.png")} alt="shop.co" />
+               
+                </button>
               {/* </Link> */}
               <h6 className="border border-double  rounded-full w-6">
                 {number}

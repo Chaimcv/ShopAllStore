@@ -43,9 +43,7 @@ var user=JSON.parse(localStorage.getItem("userdata"));
       )
     }
     
-    <Addingtocart.Provider value={cart}>
-      <Cart />
-      </Addingtocart.Provider>
+    
       <BrowserRouter>
       <Routes>
          {/* sending Addtocart function to test as props */}
@@ -53,13 +51,16 @@ var user=JSON.parse(localStorage.getItem("userdata"));
         <Route path="/" element={<Test />} />
         <Route path="/details/:id" element={<Details />} />
         {/* <Route path="/cart" element={<Cart Cartdisplay={cart}/>} /> */}
-
+        
         <Route path='/home' element={<Home />} />
         <Route path='/login' element={<Login />} />
        
       </Routes>
       </BrowserRouter>
-    
+    <Addingtocart.Provider value={cart}>
+      <Cart />
+      </Addingtocart.Provider>
+      
       <Footer />
 
     </div>

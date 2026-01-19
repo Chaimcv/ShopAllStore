@@ -8,7 +8,7 @@ import { Addingtocart } from '../App';
 const Cart = () => {
   // const {id}=useParams();
 
-  const cartitemsDisplay=useContext(Addingtocart)
+  const cartitemsDisplay=useContext(Addingtocart);
   console.log(cartitemsDisplay,"cartitemsdisplay");
    const url = process.env.REACT_APP_API_URL;
    
@@ -24,10 +24,14 @@ const Cart = () => {
 
 //   console.log(icart,"hhhhhh");
   return (
-    <div>
-      {/* <div className='kk' key={icart.id}>
-        <h3>Title:{icart?.userId}</h3>
-      </div> */}
+    <div className='cart-items'>
+      {cartitemsDisplay.map((citems)=>
+      <div key={citems.id}>
+
+        <h3>{citems?.title}</h3>
+       <h5 className="price">Price:₹{citems?.price}</h5>
+      </div>)}
+      
     </div>
   )
 }
