@@ -31,7 +31,7 @@ const Header = ({ cartdata, loginuser }) => {
           <img src={require("./assets/SHOP.CO.png")} alt="shop.co" />
         </div>
         <div className="w-auto">
-          <p className="items flex grid grid-cols-8">
+          <div className="items flex grid grid-cols-8">
             <select name="show" defaultValue="shop">
               <option>Shop</option>
               <option>Ornaments</option>
@@ -43,16 +43,19 @@ const Header = ({ cartdata, loginuser }) => {
             <button>Brands</button>
             <input type="text" placeholder="search"></input>
             <span className="w-[20%] relative">
+              {/* <Link to="/cart"> */}
               <button onClick={cartbtn}>
                <img src={require("./assets/cart.png")} alt="shop.co" />
+               
                 </button>
+              {/* </Link> */}
               <h6 className="border border-double  rounded-full w-6">
                 {number}
               </h6>
             </span>
             <img src="{test}" alt="userimage" />
             {/* <img src={require("./assets/Frame (3).png")} alt="shop.co" /> */}
-          </p>
+          </div>
         </div>
       </div>
 
