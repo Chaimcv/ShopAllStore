@@ -18,7 +18,7 @@ const Header = ({ cartdata, loginuser }) => {
  const navigate=useNavigate();
   const cartbtn =()=>{
     console.log("testingnav");
-    // navigate("/cart");
+    navigate("/cart");
   };
 
   return (
@@ -44,7 +44,7 @@ const Header = ({ cartdata, loginuser }) => {
             <input type="text" placeholder="search"></input>
             <span className="w-[20%] relative">
               {/* <Link to="/cart"> */}
-              <button onClick={()=>cartbtn}>
+              <button onClick={cartbtn}>
                <img src={require("./assets/cart.png")} alt="shop.co" />
                
                 </button>
