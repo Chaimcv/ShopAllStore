@@ -24,9 +24,6 @@ const config = {
   }
 };
 
-
-
-
       useEffect(() => {
       Addnewuser();
     }, []);
@@ -35,8 +32,7 @@ const config = {
     console.log("userpage");
     axios.post(`${url}`,Datasadded,config).then((response) => {
       console.log(response.data, "addeduser");
-   
-     
+  
   
     });
   };
