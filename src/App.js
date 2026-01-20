@@ -34,10 +34,13 @@ function App() {
 
   return (
     <div className="App">
+       <Addingtocart.Provider value={cart}>
       <BrowserRouter>
         {accessToken && <Header cartdata={cart} loginuser={user} />}
         <Routes>
           <>
+          
+         
             {/* sending Addtocart function to test as props */}
             <Route path="/" element={<Test Addtocart={Addtocart} />} />
             <Route path="/" element={<Test />} />
@@ -46,15 +49,13 @@ function App() {
 
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/cart" element={<Cart />} />
+           
           </>
         </Routes>
 
-        {
-          <Addingtocart.Provider value={cart}>
-            <Cart />
-          </Addingtocart.Provider>
-        }
       </BrowserRouter>
+      </Addingtocart.Provider>
 
       <Footer />
     </div>

@@ -16,7 +16,7 @@ const Header = ({ cartdata, loginuser }) => {
   console.log(number, "number");
 
  const navigate=useNavigate();
-  const cartbtn=()=>{
+  const cartbtn =()=>{
     console.log("testingnav");
     // navigate("/cart");
   };
