@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { data, Link, useNavigate, useParams } from "react-router-dom";
 import axios, * as others from "axios";
 
-const Details = () => {
+ const Details = () => {
   const { id } = useParams();
   const url = process.env.REACT_APP_API_URL;
   const navigate = useNavigate();
@@ -84,4 +84,6 @@ const Details = () => {
   );
 };
 
+
 export default Details;
+
