@@ -43,12 +43,9 @@ const Header = ({ cartdata, loginuser }) => {
             <button>Brands</button>
             <input type="text" placeholder="search"></input>
             <span className="w-[20%] relative">
-              {/* <Link to="/cart"> */}
               <button onClick={cartbtn}>
                <img src={require("./assets/cart.png")} alt="shop.co" />
-               
                 </button>
-              {/* </Link> */}
               <h6 className="border border-double  rounded-full w-6">
                 {number}
               </h6>
