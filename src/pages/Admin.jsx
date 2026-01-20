@@ -1,8 +1,18 @@
+import axios from 'axios'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Admin = () => {
+const navigate=useNavigate();
+
+   const Adduser=()=>{
+        navigate("/addinguser");
+      
+    }
   return (
-    <div>Admin</div>
+    <div>
+        <button onClick={Adduser}>Create user</button>
+    </div>
   )
 }
 

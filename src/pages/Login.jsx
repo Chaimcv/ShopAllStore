@@ -12,6 +12,10 @@ const Login = () => {
     loginFun();
   }, []);
 
+const Adminswitch=()=>{
+  navigate("/admin");
+}
+
   // login data===username: emilys ,password: emilyspass
 
   const loginFun = () => {
@@ -62,6 +66,7 @@ const Login = () => {
       <div>
         <div className="p-[10%] ">
           <div className=" ">
+            <button onClick={Adminswitch}>Switch to admin Page</button>
             <h1 className="font-bold mt-[10%] flex justify-start">
               Welcome to
               <br /> <br />
