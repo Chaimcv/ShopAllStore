@@ -9,7 +9,6 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import React, { useState } from "react";
 
-
 export const Addingtocart = React.createContext();
 
 function App() {
@@ -36,27 +35,26 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-       {accessToken && <Header cartdata={cart} loginuser={user} />}
+        {accessToken && <Header cartdata={cart} loginuser={user} />}
         <Routes>
           <>
-        
-         
+            {/* sending Addtocart function to test as props */}
+            <Route path="/" element={<Test Addtocart={Addtocart} />} />
+            <Route path="/" element={<Test />} />
+            <Route path="/details/:id" element={<Details />} />
+            {/* <Route path="/cart" element={<Cart Cartdisplay={cart}/>} /> */}
 
-          {/* sending Addtocart function to test as props */}
-          <Route path="/" element={<Test Addtocart={Addtocart} />} />
-          <Route path="/" element={<Test />} />
-          <Route path="/details/:id" element={<Details />} />
-          {/* <Route path="/cart" element={<Cart Cartdisplay={cart}/>} /> */}
-
-          <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/login" element={<Login />} />
           </>
         </Routes>
-       
+
+        {
+          <Addingtocart.Provider value={cart}>
+            <Cart />
+          </Addingtocart.Provider>
+        }
       </BrowserRouter>
-       <Addingtocart.Provider value={cart}>
-        <Cart />
-      </Addingtocart.Provider>
 
       <Footer />
     </div>
