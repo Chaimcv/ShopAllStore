@@ -27,9 +27,13 @@ const Cart = () => {
     <div className='cart-items'>
       {cartitemsDisplay.map((citems)=>
       <div key={citems.id}>
-
+       <img
+          className=" bg-gray-400"
+          src={citems?.image}
+        ></img>
         <h3>{citems?.title}</h3>
        <h5 className="price">Price:₹{citems?.price}</h5>
+       <button>Buy Now</button>
       </div>)}
       
     </div>

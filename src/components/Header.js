@@ -1,8 +1,8 @@
 import React, { use } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import Cart from "../pages/Cart";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Header = ({ cartdata, loginuser }) => {
@@ -15,9 +15,10 @@ const Header = ({ cartdata, loginuser }) => {
   const number = cartdata.length; //to display the number of items in cart icon
   console.log(number, "number");
 
-  const navigate=useNavigate();
+ const navigate=useNavigate();
   const cartbtn=()=>{
-    navigate("/cart");
+    console.log("testingnav");
+    // navigate("/cart");
   };
 
   return (
