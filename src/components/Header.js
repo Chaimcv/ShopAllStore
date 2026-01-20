@@ -10,7 +10,7 @@ const Header = ({ cartdata, loginuser }) => {
   console.log(cartdata, "cartdata");
 
   const test = loginuser.userimage;
-  console.log(test, "ttttttt");
+  console.log(test, "loginuserimage");
 
   const number = cartdata.length; //to display the number of items in cart icon
   console.log(number, "number");

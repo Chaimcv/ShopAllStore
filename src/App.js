@@ -9,6 +9,7 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import React, { useState } from "react";
 import Adminpage from "./pages/Adminpage";
+import User from "./pages/User";
 
 export const Addingtocart = React.createContext();
 
@@ -47,7 +48,7 @@ function App() {
             <Route path="/" element={<Test />} />
             <Route path="/details/:id" element={<Details />} />
             {/* <Route path="/cart" element={<Cart Cartdisplay={cart}/>} /> */}
-
+ <Route path="/addinguser" element={<User />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />
