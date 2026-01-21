@@ -1,54 +1,90 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const User = () => {
-  const url=process.env.REACT_APP_ADMIN_URL;
-     console.log(url,"url");
+  const url = process.env.REACT_APP_ADMIN_URL;
+  console.log(url, "url");
+  const navigate = useNavigate();
 
-     const[name,setName]=useState();
-      const[age,setAge]=useState();
-       const[email,setEmail]=useState();
-        const[pnumber,setPhonenumber]=useState();
+  const [datta, setResdata] = useState();
 
-        const Datasadded = {
-  name: {name},
-  age:{age},
-  email: {email},
-  pHonenumber:{pnumber}
-};
+  const [name, setName] = useState();
+  const [age, setAge] = useState();
+  const [email, setEmail] = useState();
+  const [pnumber, setPhonenumber] = useState();
 
-const config = {
-  headers: {
-    'Authorization': 'Bearer my-token',
-    'My-Custom-Header': 'foobar'
-  }
-};
-
-      useEffect(() => {
-      Addnewuser();
-    }, []);
-
-  const Addnewuser=()=>{
-    console.log("userpage");
-    axios.post(`${url}`,Datasadded,config).then((response) => {
-      console.log(response.data, "addeduser");
-  
-  
-    });
+  const Datasadded = {
+    name: { name },
+    age: { age },
+    email: { email },
+    pHonenumber: { pnumber },
   };
 
+  const config = {
+    headers: {
+      Authorization: "Bearer my-token",
+      "My-Custom-Header": "foobar",
+    },
+  };
 
-  
+  useEffect(() => {
+    if (datta != null) {
+      Addnewuser();
+    }
+  }, []);
+
+  const Addnewuser = () => {
+    console.log("userpage");
+    axios.post(`${url}`, Datasadded, config).then((response) => {
+      console.log(response.data, "addeduser");
+      setResdata(response.data);
+    });
+    alert("New user addition success");
+    navigate("/admin");
+  };
+
   return (
     <div>
-     <label for="Name">Name<input type='text'  value={name} onChange={(e) => setName(e.target.value)} /></label><br />
-      <label for="Age">Age<input type='number' value={age} onChange={(e) => setAge(e.target.value)}/></label> <br />
-        <label for="Email">Email<input type='email' value={email}  onChange={(e) => setEmail(e.target.value)}/></label><br />
-         <label for="Phone number">Phone number<input type='phonenumber' value={pnumber} onChange={(e) => setPhonenumber(e.target.value)}/></label><br />
-        
-         <button onClick={Addnewuser}>Submit</button>
+      <label for="Name">
+        Name
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <br />
+      <label for="Age">
+        Age
+        <input
+          type="number"
+          value={age}
+          onChange={(e) => setAge(e.target.value)}
+        />
+      </label>{" "}
+      <br />
+      <label for="Email">
+        Email
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </label>
+      <br />
+      <label for="Phone number">
+        Phone number
+        <input
+          type="phonenumber"
+          value={pnumber}
+          onChange={(e) => setPhonenumber(e.target.value)}
+        />
+      </label>
+      <br />
+      <button onClick={Addnewuser}>Submit</button>
     </div>
-  )
-}
+  );
+};
 
-export default User
+export default User;
