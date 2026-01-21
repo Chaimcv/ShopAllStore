@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import React, { useState } from "react";
 import Adminpage from "./pages/Adminpage";
 import User from "./pages/User";
+import { Userdetails } from "./pages/Userdetails";
 
 export const Addingtocart = React.createContext();
 
@@ -41,15 +42,19 @@ function App() {
         {accessToken && <Header cartdata={cart} loginuser={user} />}
         <Routes>
           <>
-           <Route path="/admin" element={<Adminpage />} />
+           <Route path="/admin" element={<Adminpage />} >
+             <Route path="userdetails" element={<Userdetails />}></Route>
+           </Route>
+
+            <Route path="/addinguser/:id" element={<User />} />
+             <Route path="/addinguser" element={<User />} />
          
             {/* sending Addtocart function to test as props */}
             <Route path="/" element={<Test Addtocart={Addtocart} />} />
             <Route path="/" element={<Test />} />
             <Route path="/details/:id" element={<Details />} />
             {/* <Route path="/cart" element={<Cart Cartdisplay={cart}/>} /> */}
-            <Route path="/addinguser/:id" element={<User />} />
-             <Route path="/addinguser" element={<User />} />
+           
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cart" element={<Cart />} />

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 const User = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
   console.log(id, "editid");
   const [edits, setEdits] = useState();
 
@@ -19,19 +19,20 @@ const User = () => {
   const [pnumber, setPhonenumber] = useState();
 
   //edit section
-  useEffect(() => {
-    editdata();
-  }, [id]);
-  const editdata = () => {
-    console.log("editdata page");
-    axios.get(`${url}/:${id}`).then((response) => {
-      console.log(response.data, "data to be edited");
-      setEdits(response.data);
-      console.log(edits, "edits");
-    });
+  // useEffect(() => {
+  //   editdata();
+  // }, [id]);
+  // const editdata = () => {
+  //   console.log("editdata page");
+  //   axios.get(`${url}/:${id}`).then((response) => {
+  //     console.log(response.data, "data to be edited");
+  //     setEdits(response.data);
+  //     console.log(edits, "edits");
+  //   });
+
     //  email=edits.email;
     //  console.log(email,"ee");
-  };
+  // };
 
   //add section
   const Datasadded = {

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import "../App.css";
 import "./Adminpage.css";
+import User from './User';
 
 const Adminpage = () => {
      const url=process.env.REACT_APP_ADMIN_URL;
@@ -10,11 +11,16 @@ const Adminpage = () => {
 
    const [users, setUsers] = useState([]);
 
+   const[buttonclick,setButtonclick]=(false);
+
    const[posts,setPosts]=useState([]);  //delete
 
     const navigate=useNavigate();
+
+
      const Adduser = () => {
-    navigate("/addinguser");
+      setButtonclick(true); //visible
+    <User />
   };
 
   const Deleteuser=(deleteid)=>{
@@ -59,7 +65,7 @@ console.log(users,"users");
                 <h3 className="font-bold" >Age:{items?.age.age}</h3>
                  <h3 className="font-bold" >email id:{items?.email.email}</h3>
                   <h3 className="font-bold" >Phone number:{items?.pHonenumber.pnumber}</h3>
-                   <Link to={`/userdetails/${items.id}`}><button className='View'>View</button></Link><br />
+                   <Link to={`userdetails/${items.id}`}><button className='View'>View</button></Link><br />
                    <button className='Delete' onClick={()=>Deleteuser(items.id)}>Delete</button>
               
           
