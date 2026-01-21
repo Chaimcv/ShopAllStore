@@ -10,6 +10,8 @@ const Adminpage = () => {
 
    const [users, setUsers] = useState([]);
 
+   const[posts,setPosts]=useState([]);  //delete
+
     const navigate=useNavigate();
      const Adduser = () => {
     navigate("/addinguser");
@@ -20,12 +22,19 @@ const Adminpage = () => {
   }
 
   const Deleteuser=(deleteid)=>{
-axios.delete(`${url}/:${deleteid}`).then(response => {
+axios.delete(`${url}/${deleteid}`).then(response => {
       console.log(response);
-    });
 
+    });
+ alert("Deleted");
+ setUsers()
   }
 
+
+// const Deleteuser = (index) => {
+//   const updatedPosts = posts.filter((_, i) => i !== index);
+//   setPosts(updatedPosts);
+// };
 
 console.log(users,"users");
  useEffect(()=>{
@@ -46,7 +55,7 @@ console.log(users,"users");
    
       {users.map((items) => (
        
-            <div className="bg-blue-600 p-4 border-double" key={items?.id}>
+            <div className="user-display" key={items?.id}>
          
                <h3 className="font-bold" >Name:{items?.name.name}</h3>
                 <h3 className="font-bold" >Age:{items?.age.age}</h3>
