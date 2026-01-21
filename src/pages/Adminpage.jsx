@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import "../App.css";
 import "./Adminpage.css";
 
@@ -17,17 +17,15 @@ const Adminpage = () => {
     navigate("/addinguser");
   };
 
-  const Edituser=(editid)=>{
-
-  }
-
   const Deleteuser=(deleteid)=>{
+    console.log(deleteid,"deleteid");
 axios.delete(`${url}/${deleteid}`).then(response => {
-      console.log(response);
+      console.log(response,"responsecheck");
 
     });
  alert("Deleted");
- setUsers()
+
+employee();
   }
 
 
@@ -61,7 +59,7 @@ console.log(users,"users");
                 <h3 className="font-bold" >Age:{items?.age.age}</h3>
                  <h3 className="font-bold" >email id:{items?.email.email}</h3>
                   <h3 className="font-bold" >Phone number:{items?.pHonenumber.pnumber}</h3>
-                  <button className='Edit' onClick={()=>Edituser(items.id)}>Edit</button><br />
+                   <Link to={`/userdetails/${items.id}`}><button className='View'>View</button></Link><br />
                    <button className='Delete' onClick={()=>Deleteuser(items.id)}>Delete</button>
               
           

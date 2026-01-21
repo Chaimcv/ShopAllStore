@@ -2,7 +2,7 @@
     background-color: blueviolet;
     height: 5000px;
 }
-.Add-user,.Edit,.Delete{
+.Add-user,.View,.Delete{
     background-color: black;
     padding: 5px;
     border-radius: 80%;

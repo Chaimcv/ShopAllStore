@@ -1,8 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const User = () => {
+  const { id } = useParams();
+  console.log(id, "editid");
+  const [edits, setEdits] = useState();
+
   const url = process.env.REACT_APP_ADMIN_URL;
   console.log(url, "url");
   const navigate = useNavigate();
@@ -14,6 +18,22 @@ const User = () => {
   const [email, setEmail] = useState();
   const [pnumber, setPhonenumber] = useState();
 
+  //edit section
+  useEffect(() => {
+    editdata();
+  }, [id]);
+  const editdata = () => {
+    console.log("editdata page");
+    axios.get(`${url}/:${id}`).then((response) => {
+      console.log(response.data, "data to be edited");
+      setEdits(response.data);
+      console.log(edits, "edits");
+    });
+    //  email=edits.email;
+    //  console.log(email,"ee");
+  };
+
+  //add section
   const Datasadded = {
     name: { name },
     age: { age },
