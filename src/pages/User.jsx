@@ -104,6 +104,7 @@ const User = () => {
       </label>
       <br />
       <button onClick={Addnewuser}>Submit</button>
+      {/* <button onClick={form(false)}>Cancel</button> */}
     </div>
   );
 };
