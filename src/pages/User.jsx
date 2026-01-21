@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const User = () => {
   // const { id } = useParams();
-  console.log(id, "editid");
+
   const [edits, setEdits] = useState();
 
   const url = process.env.REACT_APP_ADMIN_URL;
