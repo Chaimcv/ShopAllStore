@@ -56,6 +56,7 @@ console.log(users,"users");
   
   return (
     <div className='not text-white'>
+      <User updateddata={employee()}/>
        <button className='Add-user' onClick={Adduser}>Add user</button>
         {formvisible&&(
           <User />

@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const User = () => {
+const User = (updateddata) => {
   // const { id } = useParams();
-
+console.log(updateddata,"updateddata");
   const [edits, setEdits] = useState();
 
   const url = process.env.REACT_APP_ADMIN_URL;
@@ -63,6 +63,7 @@ const User = () => {
     });
     alert("New user addition success");
     navigate("/admin");
+
   };
 
   return (
