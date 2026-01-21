@@ -10,7 +10,7 @@ import Login from "./pages/Login";
 import React, { useState } from "react";
 import Adminpage from "./pages/Adminpage";
 import User from "./pages/User";
-import { Userdetails } from "./pages/Userdetails";
+import  Userdetails from "./pages/Userdetails";
 
 export const Addingtocart = React.createContext();
 

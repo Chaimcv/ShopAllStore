@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const Userdetails = () => {
+const Userdetails = () => {
   return (
     <div>Userdetails</div>
   )
 }
+
+export default Userdetails

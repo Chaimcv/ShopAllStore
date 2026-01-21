@@ -11,17 +11,17 @@ const Adminpage = () => {
 
    const [users, setUsers] = useState([]);
 
-   const[buttonclick,setButtonclick]=(false);
+   //const[buttonclick,setButtonclick]=(false);
 
    const[posts,setPosts]=useState([]);  //delete
 
     const navigate=useNavigate();
 
 
-     const Adduser = () => {
-      setButtonclick(true); //visible
-    <User />
-  };
+  //    const Adduser = () => {
+  //     setButtonclick(true); //visible
+  //   <User />
+  // };
 
   const Deleteuser=(deleteid)=>{
     console.log(deleteid,"deleteid");
@@ -55,7 +55,7 @@ console.log(users,"users");
   
   return (
     <div className='not text-white'>
-       <button className='Add-user' onClick={Adduser}>Add user</button>
+       {/* <button className='Add-user' onClick={Adduser}>Add user</button> */}
    
       {users.map((items) => (
        
