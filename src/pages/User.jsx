@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const User = ({testinguser}) => {
+const User = ({OnCancelBtnClick}) => {
   // const { id } = useParams();
 console.log("updateddata");
   const [edits, setEdits] = useState();
@@ -61,7 +61,10 @@ console.log("updateddata");
       console.log(response.data, "addeduser");
       setResdata(response.data);
     });
-    testinguser.
+    if(datta){
+      OnCancelBtnClick()
+      
+    }
     alert("New user addition success");
     navigate("/admin");
 
@@ -106,7 +109,7 @@ console.log(testinguser,"testinguser");
       </label>
       <br />
       <button onClick={Addnewuser}>Submit</button>
-      {/* <button onClick={form(false)}>Cancel</button> */}
+       <button onClick={OnCancelBtnClick}>Cancel</button>
     </div>
   );
 };
