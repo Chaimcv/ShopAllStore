@@ -66,7 +66,8 @@ console.log(users,"users");
        <button className='Add-user' onClick={Adduser}>Add user</button>
         {formvisible&&(
           <User 
-          OnCancelBtnClick={setFormvisible(false)}/>
+          OnCancelBtnClick={setFormvisible(false)}
+          OnSubmitSuccess={employee()}/>
         )}
       {users.map((items) => (
        
