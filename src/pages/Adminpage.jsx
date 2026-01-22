@@ -7,31 +7,29 @@ import User from './User';
 
 const Adminpage = () => {
      const url=process.env.REACT_APP_ADMIN_URL;
-     console.log(url,"url");
+    //  console.log(url,"url");
 
    const [users, setUsers] = useState([]);
    
    // const[newuseraddupdates,setnewuseraddupdates]=useState();
 
    const[formvisible,setFormvisible]=useState(false);
-
+        console.log(formvisible,"formvisibility false");
 
 
 
     const navigate=useNavigate();
 
-    //  let userCreated=false;
 
-    const testinguser=()=>{
-      setnewuseraddupdates(false);
-    }
+    // const testinguser=()=>{
+    //   setnewuseraddupdates(false);
+    // }
 
 
      const Adduser = () => {
-      setFormvisible(true); //visible
-      console.log(formvisible,"formvisibility");
-    
-  };
+      setFormvisible(true);
+      console.log(formvisible,"formvisibility true");
+    };
 
   const Deleteuser=(deleteid)=>{
     console.log(deleteid,"deleteid");
@@ -59,24 +57,24 @@ console.log(users,"users");
 //  console.log(userCreated,"passedfrom user");
   
   return (
-    <div className='not text-white'>
-    
-         <User createduser={testinguser}/>
-
-       <button className='Add-user' onClick={Adduser}>Add user</button>
-        {formvisible&&(
+    <div className='not text-black'>
+     {formvisible&&(
           <User 
-          OnCancelBtnClick={setFormvisible(false)}
+        //   OnCancelBtnClick={setFormvisible(false)}
           OnSubmitSuccess={employee()}/>
         )}
+        
+
+       <button className='Add-user' onClick={Adduser}>Add user</button>
+       
       {users.map((items) => (
        
             <div className="user-display" key={items?.id}>
          
-               <h3 className="font-bold" >Name:{items?.name.name}</h3>
-                <h3 className="font-bold" >Age:{items?.age.age}</h3>
-                 <h3 className="font-bold" >email id:{items?.email.email}</h3>
-                  <h3 className="font-bold" >Phone number:{items?.pHonenumber.pnumber}</h3>
+               <h3 className="font-semibold" >Name:{items?.name.name}</h3>
+                <h3 className="font-semibold" >Age:{items?.age.age}</h3>
+                 <h3 className="font-semibold" >email id:{items?.email.email}</h3>
+                  <h3 className="font-semibold" >Phone number:{items?.pHonenumber.pnumber}</h3>
                    <Link to={`userdetails/${items.id}`}><button className='View'>View</button></Link><br />
                    <button className='Delete' onClick={()=>Deleteuser(items.id)}>Delete</button>
               

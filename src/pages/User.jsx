@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const User = ({OnCancelBtnClick,OnSubmitSuccess}) => {
   // const { id } = useParams();
+  console.log(OnSubmitSuccess,"onsubmit-success");
 console.log("updateddata");
   const [edits, setEdits] = useState();
 
@@ -61,15 +62,15 @@ console.log("updateddata");
       console.log(response.data, "addeduser");
       setResdata(response.data);
     });
-    if(datta){
-      OnCancelBtnClick()
-
-    }
+    // if(datta){
+    //   OnCancelBtnClick()
+    //  employee()
+    // }
     alert("New user addition success");
-    navigate("/admin");
+    // navigate("/admin");
 
   };
-console.log(testinguser,"testinguser");
+// console.log(testinguser,"testinguser");
   return (
     <div>
       <label for="Name">
@@ -80,7 +81,7 @@ console.log(testinguser,"testinguser");
           onChange={(e) => setName(e.target.value)}
         />
       </label>
-      <br />
+      <br /><br />
       <label for="Age">
         Age
         <input
@@ -89,7 +90,7 @@ console.log(testinguser,"testinguser");
           onChange={(e) => setAge(e.target.value)}
         />
       </label>{" "}
-      <br />
+      <br /><br />
       <label for="Email">
         Email
         <input
@@ -98,7 +99,7 @@ console.log(testinguser,"testinguser");
           onChange={(e) => setEmail(e.target.value)}
         />
       </label>
-      <br />
+      <br /><br />
       <label for="Phone number">
         Phone number
         <input
@@ -107,7 +108,7 @@ console.log(testinguser,"testinguser");
           onChange={(e) => setPhonenumber(e.target.value)}
         />
       </label>
-      <br />
+      <br /><br />
       <button onClick={Addnewuser}>Submit</button>
        <button onClick={OnCancelBtnClick}>Cancel</button>
     </div>
