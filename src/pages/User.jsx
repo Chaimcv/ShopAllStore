@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const User = ({OnCancelBtnClick,OnSubmitSuccess}) => {
+const User = ({OnSubmitSuccess,OnCancelBtnClick}) => {       //5-employee function accessed
   // const { id } = useParams();
   console.log(OnSubmitSuccess,"onsubmit-success");
 console.log("updateddata");
@@ -56,16 +56,17 @@ console.log("updateddata");
     }
   }, []);
 
-  const Addnewuser = () => {
+  const Addnewuser = () => {            //7- datas posted 
     console.log("userpage");
     axios.post(`${url}`, Datasadded, config).then((response) => {
       console.log(response.data, "addeduser");
       setResdata(response.data);
+        if(response.data){            //8-after adding data, send it to employee to map and show in admin page 
+     OnSubmitSuccess()
+      OnCancelBtnClick()
+    }
     });
-    // if(datta){
-    //   OnCancelBtnClick()
-    //  employee()
-    // }
+  
     alert("New user addition success");
     // navigate("/admin");
 
@@ -109,8 +110,11 @@ console.log("updateddata");
         />
       </label>
       <br /><br />
-      <button onClick={Addnewuser}>Submit</button>
-       <button onClick={OnCancelBtnClick}>Cancel</button>
+
+             {/* 6- after entering data submit btn clicked */}
+      <button onClick={()=>Addnewuser}>Submit</button>     
+
+       <button onClick={()=>OnCancelBtnClick}>Cancel</button>
     </div>
   );
 };

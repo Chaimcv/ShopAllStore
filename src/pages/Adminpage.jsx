@@ -5,15 +5,15 @@ import "../App.css";
 import "./Adminpage.css";
 import User from './User';
 
-const Adminpage = () => {
+const Adminpage = () => {                      
      const url=process.env.REACT_APP_ADMIN_URL;
     //  console.log(url,"url");
 
-   const [users, setUsers] = useState([]);
+   const [users, setUsers] = useState([]);    //to display users in adminpage
    
    // const[newuseraddupdates,setnewuseraddupdates]=useState();
 
-   const[formvisible,setFormvisible]=useState(false);
+   const[formvisible,setFormvisible]=useState(false);         //to set the visibility of form--numbering steps 1
         console.log(formvisible,"formvisibility false");
 
 
@@ -26,7 +26,7 @@ const Adminpage = () => {
     // }
 
 
-     const Adduser = () => {
+     const Adduser = () => {                //3- state variable value changed to true,hence form(User) is displayed. goto userpage
       setFormvisible(true);
       console.log(formvisible,"formvisibility true");
     };
@@ -60,12 +60,12 @@ console.log(users,"users");
     <div className='not text-black'>
      {formvisible&&(
           <User 
-        //   OnCancelBtnClick={setFormvisible(false)}
-          OnSubmitSuccess={employee()}/>
+          OnSubmitSuccess={employee}
+           OnCancelBtnClick={setFormvisible(false)}/>                       //4-employee function passed to Form(Userpage)
         )}
         
-
-       <button className='Add-user' onClick={Adduser}>Add user</button>
+              {/* 2- on btn click */}
+       <button className='Add-user' onClick={Adduser}>Add user</button>   
        
       {users.map((items) => (
        
