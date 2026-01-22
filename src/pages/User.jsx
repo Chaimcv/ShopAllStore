@@ -112,9 +112,9 @@ console.log("updateddata");
       <br /><br />
 
              {/* 6- after entering data submit btn clicked */}
-      <button onClick={()=>Addnewuser}>Submit</button>     
+      <button onClick={Addnewuser}>Submit</button>     
 
-       <button onClick={()=>OnCancelBtnClick}>Cancel</button>
+       <button onClick={OnCancelBtnClick}>Cancel</button>
     </div>
   );
 };
