@@ -10,12 +10,21 @@ const Adminpage = () => {
      console.log(url,"url");
 
    const [users, setUsers] = useState([]);
+   
+   // const[newuseraddupdates,setnewuseraddupdates]=useState();
 
    const[formvisible,setFormvisible]=useState(false);
 
-   const[posts,setPosts]=useState([]);  //delete
+
+
 
     const navigate=useNavigate();
+
+    //  let userCreated=false;
+
+    const testinguser=()=>{
+      setnewuseraddupdates(false);
+    }
 
 
      const Adduser = () => {
@@ -36,11 +45,6 @@ employee();
   }
 
 
-// const Deleteuser = (index) => {
-//   const updatedPosts = posts.filter((_, i) => i !== index);
-//   setPosts(updatedPosts);
-// };
-
 console.log(users,"users");
  useEffect(()=>{
        employee() 
@@ -52,11 +56,13 @@ console.log(users,"users");
       setUsers(response.data);
     })
   }
- 
+//  console.log(userCreated,"passedfrom user");
   
   return (
     <div className='not text-white'>
-      {/* <User updateddata={employee()}/>                  //here */}
+    
+         <User createduser={testinguser}/>
+
        <button className='Add-user' onClick={Adduser}>Add user</button>
         {formvisible&&(
           <User />

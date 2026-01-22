@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const User = (updateddata) => {
+const User = ({testinguser}) => {
   // const { id } = useParams();
-console.log(updateddata,"updateddata");
+console.log("updateddata");
   const [edits, setEdits] = useState();
 
   const url = process.env.REACT_APP_ADMIN_URL;
@@ -61,11 +61,12 @@ console.log(updateddata,"updateddata");
       console.log(response.data, "addeduser");
       setResdata(response.data);
     });
+    testinguser.
     alert("New user addition success");
     navigate("/admin");
 
   };
-
+console.log(testinguser,"testinguser");
   return (
     <div>
       <label for="Name">
