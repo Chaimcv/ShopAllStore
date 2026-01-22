@@ -8,23 +8,10 @@ import User from './User';
 const Adminpage = () => {                      
      const url=process.env.REACT_APP_ADMIN_URL;
     //  console.log(url,"url");
-
    const [users, setUsers] = useState([]);    //to display users in adminpage
-   
-   // const[newuseraddupdates,setnewuseraddupdates]=useState();
 
    const[formvisible,setFormvisible]=useState(false);         //to set the visibility of form--numbering steps 1
         console.log(formvisible,"formvisibility false");
-
-
-
-    const navigate=useNavigate();
-
-
-    // const testinguser=()=>{
-    //   setnewuseraddupdates(false);
-    // }
-
 
      const Adduser = () => {                //3- state variable value changed to true,hence form(User) is displayed. goto userpage
       setFormvisible(true);
@@ -35,10 +22,8 @@ const Adminpage = () => {
     console.log(deleteid,"deleteid");
 axios.delete(`${url}/${deleteid}`).then(response => {
       console.log(response,"responsecheck");
-
     });
  alert("Deleted");
-
 employee();
   }
 
