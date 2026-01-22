@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const User = ({OnCancelBtnClick}) => {
+const User = ({OnCancelBtnClick,OnSubmitSuccess}) => {
   // const { id } = useParams();
 console.log("updateddata");
   const [edits, setEdits] = useState();
@@ -63,7 +63,7 @@ console.log("updateddata");
     });
     if(datta){
       OnCancelBtnClick()
-      
+
     }
     alert("New user addition success");
     navigate("/admin");
