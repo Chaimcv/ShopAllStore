@@ -60,8 +60,8 @@ console.log(users,"users");
     <div className='not text-black'>
      {formvisible&&(
           <User 
-          OnSubmitSuccess={employee}
-           OnCancelBtnClick={setFormvisible(false)}/>                       //4-employee function passed to Form(Userpage)
+          OnSubmitSuccess={()=>employee}
+           OnCancelBtnClick={()=>setFormvisible(false)}/>                       //4-employee function passed to Form(Userpage)
         )}
         
               {/* 2- on btn click */}
