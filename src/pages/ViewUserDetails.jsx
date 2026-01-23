@@ -23,9 +23,12 @@ console.log(userdetails,"userdetails-console");
   return (
     <div className='viewuserdiv'>
     <div key={userdetails?.id}>
-        <h2>Name:{userdetails?.name}</h2>
-          <h2>id:{userdetails?.id}</h2>
-          <h3 className="font-semibold" >Age:{userdetails?.age}</h3>
+          <img src='{userdetails?.userimage}' alt='userimage' />
+          <h2 className="font-semibold" >Name:{userdetails?.name}</h2>
+          <h3 >Age:{userdetails?.age}</h3>
+         <h2>Phone Number:{userdetails?.pnumber}</h2>
+          <h3 >Email:{userdetails?.email}</h3>
+          <p>Address:{userdetails?.address}</p>
     </div>
   </div>  
   )

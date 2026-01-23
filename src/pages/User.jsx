@@ -19,6 +19,7 @@ console.log("updateddata");
   const [email, setEmail] = useState();
   const [pnumber, setPhonenumber] = useState();
    const [userimage, setUserimage] = useState();
+    const [address, setAddress] = useState();
 
   //edit section
   // useEffect(() => {
@@ -118,6 +119,15 @@ console.log("updateddata");
           type="phonenumber"
           value={pnumber}
           onChange={(e) => setPhonenumber(e.target.value)}
+        />
+      </label>
+       <br /><br />
+       <label>
+        Address
+        <input
+          type="text"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
         />
       </label>
 
