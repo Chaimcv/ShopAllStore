@@ -9,10 +9,9 @@ const AdminRoutes = () => {
     <div>
         <Routes>
              <Route path="/" element={<Adminpage />} />
-            <Route path="/admin/view" element={<ViewUserDetails />} />
+            <Route path="/view" element={<ViewUserDetails />} />
         </Routes>
     </div>
   )
 }
-
 export default AdminRoutes
