@@ -12,6 +12,7 @@ import Adminpage from "./pages/Adminpage";
 import User from "./pages/User";
 import Userdetails from "./pages/Userdetails";
 import AdminRoutes from "./Routes/AdminRoutes";
+import ViewUserDetails from "./pages/ViewUserDetails";
 
 
 export const Addingtocart = React.createContext();
@@ -45,7 +46,10 @@ function App() {
         <Routes>
           <>
            <Route path="/admin/*" element={<AdminRoutes />} />
-             <Route path="/userdetails" element={<Userdetails />}></Route>
+           {/* <Route path="/view" element={<ViewUserDetails />} />
+
+             <Route path="/userdetails" element={<Userdetails />} />
+              */}
         
 
             <Route path="/addinguser/:id" element={<User />} />

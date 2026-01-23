@@ -4,8 +4,10 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import "../App.css";
 import "./Adminpage.css";
 import User from './User';
+import ViewUserDetails from './ViewUserDetails';
 
-const Adminpage = () => {                      
+const Adminpage = () => {  
+  const navigate=useNavigate();                    
      const url=process.env.REACT_APP_ADMIN_URL;
     //  console.log(url,"url");
    const [users, setUsers] = useState([]);    //to display users in adminpage
@@ -42,6 +44,9 @@ console.log(users,"users");
   }
 //  console.log(userCreated,"passedfrom user");
   
+const testing=()=>{
+  navigate("/view");
+}
   return (
     <div className='not text-black'>
      {formvisible&&(
@@ -59,8 +64,10 @@ console.log(users,"users");
                 <h3 className="font-semibold" >Age:{items?.age.age}</h3>
                  <h3 className="font-semibold" >email id:{items?.email.email}</h3>
                   <h3 className="font-semibold" >Phone number:{items?.pHonenumber.pnumber}</h3>
-                   <Link to={`userdetails/${items.id}`}><button className='View'>View</button></Link><br />
+                   {/* <Link to={`userdetails/${items.id}`}><button className='View'>View</button></Link><br /> */}
+                     {/* <Link to={`/viewUserDetails/${items.id}`}><button className='View'>View</button></Link><br /> */}
                    <button className='Delete' onClick={()=>Deleteuser(items.id)}>Delete</button>
+                   <button onClick={testing}>testing</button>
           </div>
       ))}
     </div>
