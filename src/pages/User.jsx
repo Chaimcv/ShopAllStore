@@ -18,6 +18,7 @@ console.log("updateddata");
   const [age, setAge] = useState();
   const [email, setEmail] = useState();
   const [pnumber, setPhonenumber] = useState();
+   const [userimage, setUserimage] = useState();
 
   //edit section
   // useEffect(() => {
@@ -41,6 +42,7 @@ console.log("updateddata");
     age,
     email,
     pnumber,
+    userimage,
   };
 
   const config = {
@@ -101,7 +103,16 @@ console.log("updateddata");
         />
       </label>
       <br /><br />
-      <label for="Phone number">
+      <label>
+        User Image
+        <input
+          type="text"
+          value={userimage}
+          onChange={(e) => setUserimage(e.target.value)}
+        />
+      </label>
+      <br /><br />
+       <label for="Phone number">
         Phone number
         <input
           type="phonenumber"
@@ -109,7 +120,6 @@ console.log("updateddata");
           onChange={(e) => setPhonenumber(e.target.value)}
         />
       </label>
-      <br /><br />
 
              {/* 6- after entering data submit btn clicked */}
       <button onClick={Addnewuser}>Submit</button>     
