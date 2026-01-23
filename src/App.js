@@ -11,6 +11,7 @@ import React, { useState } from "react";
 import Adminpage from "./pages/Adminpage";
 import User from "./pages/User";
 import Userdetails from "./pages/Userdetails";
+import AdminRoutes from "./Routes/AdminRoutes";
 
 
 export const Addingtocart = React.createContext();
@@ -43,7 +44,7 @@ function App() {
         {accessToken && <Header cartdata={cart} loginuser={user} />}
         <Routes>
           <>
-           <Route path="/admin" element={<Adminpage />} />
+           <Route path="/admin/*" element={<AdminRoutes />} />
              <Route path="/userdetails" element={<Userdetails />}></Route>
         
 

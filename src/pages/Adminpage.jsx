@@ -38,6 +38,7 @@ console.log(users,"users");
       console.log(response.data, "displayuserss");
       setUsers(response.data);
     })
+   setFormvisible(false) 
   }
 //  console.log(userCreated,"passedfrom user");
   
