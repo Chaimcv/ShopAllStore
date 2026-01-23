@@ -57,10 +57,10 @@ employee();
        
       {users.map((items) => (
             <div className="user-display" key={items?.id}>
-               <h3 className="font-semibold" >Name:{items?.name.name}</h3>
-                <h3 className="font-semibold" >Age:{items?.age.age}</h3>
-                 <h3 className="font-semibold" >email id:{items?.email.email}</h3>
-                  <h3 className="font-semibold" >Phone number:{items?.pHonenumber.pnumber}</h3>
+               <h3 className="font-semibold" >Name:{items?.name}</h3>
+                <h3 className="font-semibold" >Age:{items?.age}</h3>
+                 <h3 className="font-semibold" >email id:{items?.email}</h3>
+                  <h3 className="font-semibold" >Phone number:{items?.pnumber}</h3>
                    {/* <Link to={`userdetails/${items.id}`}><button className='View'>View</button></Link><br /> */}
                      <Link to={`/admin/view/${items.id}`}><button className='View'>View</button></Link><br />
                    <button className='Delete' onClick={()=>Deleteuser(items.id)}>Delete</button>

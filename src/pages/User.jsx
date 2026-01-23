@@ -37,10 +37,10 @@ console.log("updateddata");
 
   //add section
   const Datasadded = {
-    name: { name },
-    age: { age },
-    email: { email },
-    pHonenumber: { pnumber },
+    name,
+    age,
+    email,
+    pnumber,
   };
 
   const config = {
@@ -69,7 +69,7 @@ console.log("updateddata");
   
     alert("New user addition success");
     // navigate("/admin");
-
+    
   };
 // console.log(testinguser,"testinguser");
   return (
