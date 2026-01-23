@@ -53,7 +53,7 @@ const Header = ({ cartdata, loginuser }) => {
                 {number}
               </h6>
             </span>
-            <img src="{test}" alt="userimage" />
+            <img src={test} alt="userimage" className="h-[50%] w-[50%]" />
             {/* <img src={require("./assets/Frame (3).png")} alt="shop.co" /> */}
           </div>
         </div>
@@ -70,7 +70,7 @@ const Header = ({ cartdata, loginuser }) => {
             <img src={require("./assets/cart.png")} alt="shop.co" />
             <h6 className="border border-double  rounded-full w-6">{number}</h6>
           </span>
-          <img src="{test}" alt="userimage" />
+          <img src="{test}" alt="userimage" className="h-[50%] w-[50%]" />
           <img src={require("./assets/Frame (3).png")} alt="shop.co" />
         </div>
       </div>

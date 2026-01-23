@@ -2,11 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const User = ({OnSubmitSuccess,OnCancelBtnClick}) => {       //5-employee function accessed
+const User = ({OnSubmitSuccess,OnCancelBtnClick,OnEditSuccess}) => {       //5-employee function accessed
   // const { id } = useParams();
   console.log(OnSubmitSuccess,"onsubmit-success");
 console.log("updateddata");
-  const [edits, setEdits] = useState();
+ console.log(OnEditSuccess,"success");
+  const [edits, setEdits] = useState();  //Edit section
 
   const url = process.env.REACT_APP_ADMIN_URL;
   console.log(url, "url");
@@ -44,6 +45,7 @@ console.log("updateddata");
     email,
     pnumber,
     userimage,
+    address,
   };
 
   const config = {
@@ -69,16 +71,17 @@ console.log("updateddata");
       OnCancelBtnClick()
     }
     });
-  
     alert("New user addition success");
     // navigate("/admin");
-    
   };
-// console.log(testinguser,"testinguser");
+
+  
   return (
-    <div>
+    <>
+    {OnSubmitSuccess ?(
+    <div className="AddUser-btnClick" id="AddNewUserSection">
       <label for="Name">
-        Name
+        Name: 
         <input
           type="text"
           value={name}
@@ -87,7 +90,7 @@ console.log("updateddata");
       </label>
       <br /><br />
       <label for="Age">
-        Age
+        Age: 
         <input
           type="number"
           value={age}
@@ -96,7 +99,7 @@ console.log("updateddata");
       </label>{" "}
       <br /><br />
       <label for="Email">
-        Email
+        Email: 
         <input
           type="email"
           value={email}
@@ -105,7 +108,7 @@ console.log("updateddata");
       </label>
       <br /><br />
       <label>
-        User Image
+        User Image: 
         <input
           type="text"
           value={userimage}
@@ -114,7 +117,7 @@ console.log("updateddata");
       </label>
       <br /><br />
        <label for="Phone number">
-        Phone number
+        Phone number: 
         <input
           type="phonenumber"
           value={pnumber}
@@ -123,19 +126,83 @@ console.log("updateddata");
       </label>
        <br /><br />
        <label>
-        Address
+        Address: 
         <input
           type="text"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
       </label>
+       <br /><br />
 
              {/* 6- after entering data submit btn clicked */}
       <button onClick={Addnewuser}>Submit</button>     
-
+      <br />
        <button onClick={OnCancelBtnClick}>Cancel</button>
     </div>
+
+    ):(
+
+     <div className="Edit-btn" id="EditUserSection">
+      <label for="Name">
+        Name: 
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <br /><br />
+      <label for="Age">
+        Age: 
+        <input
+          type="number"
+          value={age}
+          onChange={(e) => setAge(e.target.value)}
+        />
+      </label>{" "}
+      <br /><br />
+      <label for="Email">
+        Email: 
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </label>
+      <br /><br />
+      <label>
+        User Image: 
+        <input
+          type="text"
+          value={userimage}
+          onChange={(e) => setUserimage(e.target.value)}
+        />
+      </label>
+      <br /><br />
+       <label for="Phone number">
+        Phone number: 
+        <input
+          type="phonenumber"
+          value={pnumber}
+          onChange={(e) => setPhonenumber(e.target.value)}
+        />
+      </label>
+       <br /><br />
+       <label>
+        Address: 
+        <input
+          type="text"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+        />
+      </label>
+       <br /><br />
+       <button onClick={OnEditSuccess}>Update</button>
+    </div>
+
+)}
+    </>
   );
 };
 

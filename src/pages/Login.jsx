@@ -64,10 +64,10 @@ const Adminswitch=()=>{
         />
       </div>
       <div>
-        <div className="p-[10%] ">
+        <div className="p-[7%] ">
+           <button className="bg-black text-white" onClick={Adminswitch}>Switch to admin Page</button><br />
           <div className=" ">
-            <button onClick={Adminswitch}>Switch to admin Page</button>
-            <h1 className="font-bold mt-[10%] flex justify-start">
+            <h1 className="font-bold mt-[15%] flex justify-start">
               Welcome to
               <br /> <br />
             </h1>

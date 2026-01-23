@@ -66,7 +66,7 @@ console.log(data,"data");
 
       {/* display */}
       {/* large screen */}
-    <div className="bg-red-600  hidden lg:grid flex grid grid-cols-4 mx-[3%] my-[3%]"> 
+    <div className="bg-white  hidden lg:grid flex grid grid-cols-4 mx-[3%] my-[3%]"> 
        {data?.map((items)=>(
         <div className='card w-[95%] h-[95%] mx-auto bg-[#F2F0F1] mt-[1%]' key={items.id}>
         <p className='title text-left font-semibold text-base m-[2%]'>{items?.title}</p><br/>
