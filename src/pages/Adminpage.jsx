@@ -10,6 +10,7 @@ const Adminpage = () => {
   const navigate=useNavigate();                    
      const url=process.env.REACT_APP_ADMIN_URL;
     //  console.log(url,"url");
+
    const [users, setUsers] = useState([]);    //to display users in adminpage
 
    const[formvisible,setFormvisible]=useState(false);         //to set the visibility of form--numbering steps 1
@@ -30,7 +31,7 @@ employee();
   }
 
 
-console.log(users,"users");
+// console.log(users,"users");
  useEffect(()=>{
        employee() 
     },[])
@@ -42,11 +43,7 @@ console.log(users,"users");
     })
    setFormvisible(false) 
   }
-//  console.log(userCreated,"passedfrom user");
-  
-const testing=()=>{
-  navigate("/view");
-}
+
   return (
     <div className='not text-black'>
      {formvisible&&(
@@ -65,9 +62,8 @@ const testing=()=>{
                  <h3 className="font-semibold" >email id:{items?.email.email}</h3>
                   <h3 className="font-semibold" >Phone number:{items?.pHonenumber.pnumber}</h3>
                    {/* <Link to={`userdetails/${items.id}`}><button className='View'>View</button></Link><br /> */}
-                     {/* <Link to={`/viewUserDetails/${items.id}`}><button className='View'>View</button></Link><br /> */}
+                     <Link to={`/admin/view/${items.id}`}><button className='View'>View</button></Link><br />
                    <button className='Delete' onClick={()=>Deleteuser(items.id)}>Delete</button>
-                   <button onClick={testing}>testing</button>
           </div>
       ))}
     </div>

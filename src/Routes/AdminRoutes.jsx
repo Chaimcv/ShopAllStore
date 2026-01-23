@@ -9,7 +9,7 @@ const AdminRoutes = () => {
     <div>
         <Routes>
              <Route path="/" element={<Adminpage />} />
-            <Route path="/view" element={<ViewUserDetails />} />
+            <Route path="/view/:id" element={<ViewUserDetails />} />
         </Routes>
     </div>
   )
