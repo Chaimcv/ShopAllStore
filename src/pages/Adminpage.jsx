@@ -30,8 +30,6 @@ axios.delete(`${url}/${deleteid}`).then(response => {
 employee();
   }
 
-
-
 // console.log(users,"users");
  useEffect(()=>{
        employee() 
