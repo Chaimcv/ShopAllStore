@@ -31,6 +31,7 @@ employee();
   }
 
 
+
 // console.log(users,"users");
  useEffect(()=>{
        employee() 
@@ -44,6 +45,7 @@ employee();
    setFormvisible(false) 
   }
 
+  
   return (
     <div className='not text-black'>
      {formvisible&&(
@@ -52,6 +54,11 @@ employee();
            OnCancelBtnClick={()=>setFormvisible(false)}/>                       //4-employee function passed to Form(Userpage)
         )}
         
+        
+ {formvisible==false&&(
+    employee()
+ )}
+ 
               {/* 2- on btn click */}
        <button className='Add-user' onClick={Adduser}>Add user</button>   
        
