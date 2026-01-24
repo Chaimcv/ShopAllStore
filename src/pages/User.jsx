@@ -72,7 +72,7 @@ console.log("updateddata");
     }
     });
     alert("New user addition success");
-    // navigate("/admin");
+      
   };
 
   
