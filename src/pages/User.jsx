@@ -80,17 +80,17 @@ console.log("updateddata");
   }, [EditId]);
   
   const EditUser = () => {
-    console.log("editdata page");
+    // console.log("editdata page");
      const url=`${baseUrl}/users/${EditId}`;
      axios.put(url, Datasadded).then((response) => {
       console.log(response.data, "userUpdated");
       setEdits(response.data);
        console.log(edits, "edits");
-       if(response.data){            
-    //  OnSubmitSuccess()
-    //   OnCancelBtnClick()
-    OnEditSuccess()
-    }
+    //    if(response.data){            
+    // //  OnSubmitSuccess()
+    // //   OnCancelBtnClick()
+   
+    // }
     });
     // alert("Details Updated");
   };
@@ -167,7 +167,8 @@ console.log("updateddata");
         Name: 
         <input
           type="text"
-          value={OnEditSuccess.name}
+          value={name}
+          defaultValue={OnEditSuccess.name}
           onChange={(e) => setName(e.target.value)}
         />
       </label>
@@ -176,7 +177,8 @@ console.log("updateddata");
         Age: 
         <input
           type="number"
-          value={OnEditSuccess.age}
+          value={age}
+          defaultValue={OnEditSuccess.age}
           onChange={(e) => setAge(e.target.value)}
         />
       </label>{" "}
@@ -185,7 +187,8 @@ console.log("updateddata");
         Email: 
         <input
           type="email"
-          value={OnEditSuccess.email}
+          value={email}
+          defaultValue={OnEditSuccess.email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </label>
@@ -194,7 +197,8 @@ console.log("updateddata");
         User Image: 
         <input
           type="text"
-          value={OnEditSuccess.userimage}
+          value={userimage}
+          defaultValue={OnEditSuccess.userimage}
           onChange={(e) => setUserimage(e.target.value)}
         />
       </label>
@@ -203,7 +207,8 @@ console.log("updateddata");
         Phone number: 
         <input
           type="phonenumber"
-          value={OnEditSuccess.pnumber}
+          value={pnumber}
+          defaultValue={OnEditSuccess.pnumber}
           onChange={(e) => setPhonenumber(e.target.value)}
         />
       </label>
@@ -212,7 +217,8 @@ console.log("updateddata");
         Address: 
         <input
           type="text"
-          value={OnEditSuccess.address}
+          value={address}
+          defaultValue={OnEditSuccess.address}
           onChange={(e) => setAddress(e.target.value)}
         />
       </label>
