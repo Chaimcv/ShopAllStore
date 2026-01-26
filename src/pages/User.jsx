@@ -24,25 +24,10 @@ console.log("updateddata");
    const [userimage, setUserimage] = useState();
     const [address, setAddress] = useState();
 
-  //edit section
-  useEffect(() => {
-    EditUser();
-  }, [EditId]);
-  const EditUser = () => {
-    console.log("editdata page");
-     const url=`${baseUrl}/users/${EditId}`;
-   axios.put(url, Datasadded).then((response) => {
-      console.log(response.data, "userUpdated");
-      setEdits(response.data);
-       console.log(edits, "edits");
-    //    if(response.data){            
-    //  OnSubmitSuccess()
-    //   OnCancelBtnClick()
-    // }
-    });
-    // alert("Details Updated");
-  };
 
+    
+ 
+  
   // const ItemToBeEdited=display.filter(item=>{
   //     return item.name.includes(result);
   //   });
@@ -56,6 +41,8 @@ console.log("updateddata");
     userimage,
     address,
   };
+
+ 
 
   // const config = {
   //   headers: {
@@ -85,6 +72,28 @@ console.log("updateddata");
       
   };
 
+
+   //edit section
+
+  useEffect(() => {
+    EditUser();
+  }, [EditId]);
+  
+  const EditUser = () => {
+    console.log("editdata page");
+     const url=`${baseUrl}/users/${EditId}`;
+     axios.put(url, Datasadded).then((response) => {
+      console.log(response.data, "userUpdated");
+      setEdits(response.data);
+       console.log(edits, "edits");
+       if(response.data){            
+    //  OnSubmitSuccess()
+    //   OnCancelBtnClick()
+    OnEditSuccess()
+    }
+    });
+    // alert("Details Updated");
+  };
   
   return (
     <>
