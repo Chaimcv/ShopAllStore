@@ -2,15 +2,17 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const User = ({OnSubmitSuccess,OnCancelBtnClick,OnEditSuccess}) => {       //5-employee function accessed
+const User = ({OnSubmitSuccess,OnCancelBtnClick,OnEditSuccess,EditId}) => {       //5-employee function accessed
   // const { id } = useParams();
+  console.log(EditId,"passedid");
   console.log(OnSubmitSuccess,"onsubmit-success");
 console.log("updateddata");
- console.log(OnEditSuccess,"success");
-  const [edits, setEdits] = useState();  //Edit section
+ console.log(OnEditSuccess,"viewers--success");
 
-  const url = process.env.REACT_APP_ADMIN_URL;
-  console.log(url, "url");
+  const [edits, setEdits] = useState([]);  //Edit section
+
+  const baseUrl = process.env.REACT_APP_ADMIN_URL;
+  console.log(baseUrl, "baseurl");
   const navigate = useNavigate();
 
   const [datta, setResdata] = useState();
@@ -23,20 +25,27 @@ console.log("updateddata");
     const [address, setAddress] = useState();
 
   //edit section
-  // useEffect(() => {
-  //   editdata();
-  // }, [id]);
-  // const editdata = () => {
-  //   console.log("editdata page");
-  //   axios.get(`${url}/:${id}`).then((response) => {
-  //     console.log(response.data, "data to be edited");
-  //     setEdits(response.data);
-  //     console.log(edits, "edits");
-  //   });
+  useEffect(() => {
+    EditUser();
+  }, [EditId]);
+  const EditUser = () => {
+    console.log("editdata page");
+     const url=`${baseUrl}/users/${EditId}`;
+   axios.post(url, Datasadded).then((response) => {
+      console.log(response.data, "userUpdated");
+      setEdits(response.data);
+      // console.log(edits, "edits");
+    //    if(response.data){            
+    //  OnSubmitSuccess()
+    //   OnCancelBtnClick()
+    // }
+    });
+    // alert("Details Updated");
+  };
 
-    //  email=edits.email;
-    //  console.log(email,"ee");
-  // };
+  // const ItemToBeEdited=display.filter(item=>{
+  //     return item.name.includes(result);
+  //   });
 
   //add section
   const Datasadded = {
@@ -48,12 +57,12 @@ console.log("updateddata");
     address,
   };
 
-  const config = {
-    headers: {
-      Authorization: "Bearer my-token",
-      "My-Custom-Header": "foobar",
-    },
-  };
+  // const config = {
+  //   headers: {
+  //     Authorization: "Bearer my-token",
+  //     "My-Custom-Header": "foobar",
+  //   },
+  // };
 
   useEffect(() => {
     if (datta != null) {
@@ -63,7 +72,8 @@ console.log("updateddata");
 
   const Addnewuser = () => {            //7- datas posted 
     console.log("userpage");
-    axios.post(`${url}`, Datasadded, config).then((response) => {
+     const url=`${baseUrl}/users`;
+    axios.post(url, Datasadded).then((response) => {
       console.log(response.data, "addeduser");
       setResdata(response.data);
         if(response.data){            //8-after adding data, send it to employee to map and show in admin page 
@@ -148,7 +158,7 @@ console.log("updateddata");
         Name: 
         <input
           type="text"
-          value={name}
+          value={OnEditSuccess.name}
           onChange={(e) => setName(e.target.value)}
         />
       </label>
@@ -157,7 +167,7 @@ console.log("updateddata");
         Age: 
         <input
           type="number"
-          value={age}
+          value={OnEditSuccess.age}
           onChange={(e) => setAge(e.target.value)}
         />
       </label>{" "}
@@ -166,7 +176,7 @@ console.log("updateddata");
         Email: 
         <input
           type="email"
-          value={email}
+          value={OnEditSuccess.email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </label>
@@ -175,7 +185,7 @@ console.log("updateddata");
         User Image: 
         <input
           type="text"
-          value={userimage}
+          value={OnEditSuccess.userimage}
           onChange={(e) => setUserimage(e.target.value)}
         />
       </label>
@@ -184,7 +194,7 @@ console.log("updateddata");
         Phone number: 
         <input
           type="phonenumber"
-          value={pnumber}
+          value={OnEditSuccess.pnumber}
           onChange={(e) => setPhonenumber(e.target.value)}
         />
       </label>
@@ -193,12 +203,12 @@ console.log("updateddata");
         Address: 
         <input
           type="text"
-          value={address}
+          value={OnEditSuccess.address}
           onChange={(e) => setAddress(e.target.value)}
         />
       </label>
        <br /><br />
-       <button onClick={OnEditSuccess}>Update</button>
+       <button onClick={EditUser}>Update</button>
     </div>
 
 )}

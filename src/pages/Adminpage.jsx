@@ -8,11 +8,13 @@ import ViewUserDetails from './ViewUserDetails';
 
 const Adminpage = () => {  
   const navigate=useNavigate();                    
-     const url=process.env.REACT_APP_ADMIN_URL;
+     const baseUrl=process.env.REACT_APP_ADMIN_URL;
+    
     //  console.log(url,"url");
 
-   const [users, setUsers] = useState([]);    //to display users in adminpage
-
+    const [users, setUsers] = useState([]);    //to display users in adminpage
+// const users=[{name: "eeeee",email: "ff@gmail.com",age:"22"},
+//              {name: "fff",email: "ee@gmail.com",age:"23"}];
    const[formvisible,setFormvisible]=useState(false);         //to set the visibility of form--numbering steps 1
         console.log(formvisible,"formvisibility false");
 
@@ -23,29 +25,32 @@ const Adminpage = () => {
 
   const Deleteuser=(deleteid)=>{
     console.log(deleteid,"deleteid");
-axios.delete(`${url}/${deleteid}`).then(response => {
+     const url=`${baseUrl}/users/${deleteid}`;
+      console.log(url,"delete-url");
+axios.delete(url).then(response => {
+ 
       console.log(response,"responsecheck");
     });
  alert("Deleted");
 employee();
   }
 
-
-
-// console.log(users,"users");
+console.log(users,"users");
  useEffect(()=>{
        employee() 
     },[])
  const employee = () => {
     console.log("userpage");
-    axios.get(`${url}`).then((response) => {
+     const url=`${baseUrl}/users`;
+     console.log(url,"userchecking");
+    axios.get(url).then((response) => {
+       
       console.log(response.data, "displayuserss");
       setUsers(response.data);
     })
    setFormvisible(false) 
   }
 
-  
   return (
     <div className='not text-black'>
      {formvisible&&(
@@ -54,17 +59,13 @@ employee();
            OnCancelBtnClick={()=>setFormvisible(false)}/>                       //4-employee function passed to Form(Userpage)
         )}
         
-        
- {formvisible==false&&(
-    employee()
- )}
- 
               {/* 2- on btn click */}
        <button className='Add-user' onClick={Adduser}>Add user</button>   
-       
+       {users.length>0?(
+     <div>
       {users.map((items) => (
             <div className="user-display" key={items?.id}>
-              <div className='user-image'><img src={items?.userimage} alt='userimg'></img></div>
+              <div className='user-images'><img src={items?.userimage}  className='user-image' alt='userimg'></img></div>
               <div className='user-info'>
                <h3 className="font-semibold" >Name:{items?.name}</h3>
                 <h3 className="font-semibold" >Age:{items?.age}</h3>
@@ -73,6 +74,11 @@ employee();
                    </div>
           </div>
       ))}
+      </div>
+       ):(
+<><h2>Users not available</h2></>
+       )}
+      
     </div>
   )
   }

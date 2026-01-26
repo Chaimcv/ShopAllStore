@@ -21,6 +21,8 @@ h3{
 .user-image{
    border-radius: 100%;
    background-color: rgb(172, 122, 219);
+   height: 75%;
+   width: 75%;
 }
 .user-info{
     background-color: aliceblue;
