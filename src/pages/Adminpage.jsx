@@ -35,7 +35,11 @@ axios.delete(url).then(response => {
 employee();
   }
 
+
 console.log(users,"users");
+
+// console.log(users,"users");
+
  useEffect(()=>{
        employee() 
     },[])
