@@ -31,10 +31,10 @@ console.log("updateddata");
   const EditUser = () => {
     console.log("editdata page");
      const url=`${baseUrl}/users/${EditId}`;
-   axios.post(url, Datasadded).then((response) => {
+   axios.put(url, Datasadded).then((response) => {
       console.log(response.data, "userUpdated");
       setEdits(response.data);
-      // console.log(edits, "edits");
+       console.log(edits, "edits");
     //    if(response.data){            
     //  OnSubmitSuccess()
     //   OnCancelBtnClick()
