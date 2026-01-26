@@ -82,6 +82,7 @@ console.log("updateddata");
   const EditUser = () => {
     // console.log("editdata page");
      const url=`${baseUrl}/users/${EditId}`;
+     console.log(Datasadded,"datas after editing");
      axios.put(url, Datasadded).then((response) => {
       console.log(response.data, "userUpdated");
       setEdits(response.data);
