@@ -53,7 +53,6 @@ console.log(userdetails,"userdetails-console");
           <p>Address:{userdetails?.address}</p>
           </div>
           </div>
-          {/* <button className='Delete' onClick={()=>Deleteuser(userdetails.id)}>Delete</button> */}
     </div>
   </div>  
   )

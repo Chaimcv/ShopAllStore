@@ -46,8 +46,9 @@ const EditForm = ({OnEditSuccess,EditId}) => {
     // //   OnCancelBtnClick()
    
     // }
+    alert("Details Updated");
     });
-    // alert("Details Updated");
+    
   };
   
   return (
