@@ -9,10 +9,11 @@ import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import React, { useState } from "react";
 import Adminpage from "./pages/Adminpage";
-import User from "./pages/User";
+
 import Userdetails from "./pages/Userdetails";
 import AdminRoutes from "./Routes/AdminRoutes";
 import ViewUserDetails from "./pages/ViewUserDetails";
+import UserForm from "./components/AddUserForm";
 
 
 export const Addingtocart = React.createContext();
@@ -52,8 +53,8 @@ function App() {
               */}
         
 
-            <Route path="/addinguser/:id" element={<User />} />
-             <Route path="/addinguser" element={<User />} />
+            <Route path="/addinguser/:id" element={<UserForm />} />
+             <Route path="/addinguser" element={<UserForm />} />
          
             {/* sending Addtocart function to test as props */}
             <Route path="/" element={<Test Addtocart={Addtocart} />} />

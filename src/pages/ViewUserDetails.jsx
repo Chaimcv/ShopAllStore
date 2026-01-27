@@ -2,7 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import "./ViewUserDetails.css";
-import User from './User';
+import User from '../components/AddUserForm';
+import UserForm from '../components/AddUserForm';
+import EditForm from '../components/EditForm';
 
 const ViewUserDetails = () => {
       const { id } = useParams();
@@ -32,7 +34,7 @@ console.log(userdetails,"userdetails-console");
   return (
     <div className='viewuserdiv'>
         {formforEditVisibilty&&(
-            <User 
+            <EditForm 
             OnEditSuccess={userdetails}
             EditId={id}/>
         )}

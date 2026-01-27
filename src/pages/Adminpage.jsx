@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import "../App.css";
 import "./Adminpage.css";
-import User from './User';
 import ViewUserDetails from './ViewUserDetails';
+import AddUserForm from '../components/AddUserForm';
 
 const Adminpage = () => {  
   const navigate=useNavigate();                    
@@ -58,13 +58,13 @@ console.log(users,"users");
   return (
     <div className='not text-black'>
      {formvisible&&(
-          <User 
+          <AddUserForm 
           OnSubmitSuccess={()=>employee}
            OnCancelBtnClick={()=>setFormvisible(false)}/>                       //4-employee function passed to Form(Userpage)
         )}
         
               {/* 2- on btn click */}
-       <button className='Add-user' onClick={Adduser}>Add user</button>   
+       <button className='Add-user float-left' onClick={Adduser}>+</button>   
        {users.length>0?(
      <div>
       {users.map((items) => (
