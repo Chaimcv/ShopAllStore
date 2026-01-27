@@ -15,7 +15,6 @@ const ViewUserDetails = () => {
 
       const Edit=()=>{
         setFormForEditVisibility(true);
-
       }
    
 console.log(userdetails,"userdetails-console");
@@ -44,7 +43,6 @@ console.log(userdetails,"userdetails-console");
          <button className='Edit bg-black text-white' onClick={Edit}>Edit</button>
       </div>
         <div>
-      
          <div className='viewuserdiv'>
            <div> <img src={userdetails?.userimage} className='w-[20%] h-[20%]' alt='userimage' /></div>
           <h3 >Age:{userdetails?.age}</h3>
