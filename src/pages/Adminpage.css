@@ -40,14 +40,23 @@
 h3{
     padding: 5px;
 }
+.user-images{
+    align-items: center;
+   margin-left: 30%;
+}
 .user-image{
    border-radius: 100%;
    background-color: rgb(172, 122, 219);
-   height: 45%;
-   width: 25%;
+   height: 75%;
+   width: 60%;
    align-content: center;
+ 
 }
 .user-info{
     background-color: rgb(230, 227, 227);
     
+}
+.btn-align{
+    display: flex;
+    justify-content: space-around;
 }

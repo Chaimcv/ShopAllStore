@@ -71,7 +71,7 @@ const Adminpage = () => {
       </div>
 
       {users.length > 0 ? (
-        <div className="Display-usersSection grid grid-cols-3 rounded-xl">
+        <div className="Display-usersSection grid grid-cols-4 rounded-xl">
           {users.map((items) => (
             <div className="card">
               <div className="user-display" key={items?.id}>
@@ -83,18 +83,19 @@ const Adminpage = () => {
                   ></img>
                 </div>
                 <div className="user-info">
-                  <h3 className="font-semibold">Name:{items?.name}</h3>
-                  <h3 className="font-semibold">Age:{items?.age}</h3>
+                  <h3 className="font-semibold">NAME: {items?.name}</h3>
+                  <h3 className="font-semibold">AGE: {items?.age}</h3>
+                  <div className="btn-align">
                   <Link to={`/admin/view/${items.id}`}>
                     <button className="View">View</button>
                   </Link>
-                  <br />
                   <button
                     className="Delete"
                     onClick={() => Deleteuser(items.id)}
                   >
                     Delete
                   </button>
+                  </div>
                 </div>
               </div>
             </div>

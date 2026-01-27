@@ -32,20 +32,27 @@ console.log(userdetails,"userdetails-console");
    }
 
   return (
-    <div className='viewuserdiv'>
+    <div >
         {formforEditVisibilty&&(
             <EditForm 
             OnEditSuccess={userdetails}
             EditId={id}/>
         )}
     <div key={userdetails?.id}>
-          <img src={userdetails?.userimage} className='w-[20%] h-[20%]' alt='userimage' />
-          <h2 className="font-semibold" >Name:{userdetails?.name}</h2>
+      <div className='HeroSection'>
+         <h2 className="font-semibold" >NAME: {userdetails?.name}</h2>
+         <button className='Edit bg-black text-white' onClick={Edit}>Edit</button>
+      </div>
+        <div>
+      
+         <div className='viewuserdiv'>
+           <div> <img src={userdetails?.userimage} className='w-[20%] h-[20%]' alt='userimage' /></div>
           <h3 >Age:{userdetails?.age}</h3>
          <h2>Phone Number:{userdetails?.pnumber}</h2>
           <h3 >Email:{userdetails?.email}</h3>
           <p>Address:{userdetails?.address}</p>
-          <button className='Edit' onClick={Edit}>Edit</button>
+          </div>
+          </div>
           {/* <button className='Delete' onClick={()=>Deleteuser(userdetails.id)}>Delete</button> */}
     </div>
   </div>  

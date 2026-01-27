@@ -2,3 +2,8 @@
     background-color: rgb(218, 206, 230);
     margin:10%;
 }
+.HeroSection{
+    display: flex;
+    
+    align-content:space-between;
+}
