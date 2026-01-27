@@ -41,9 +41,8 @@ const EditForm = ({OnEditSuccess,EditId}) => {
     //    if(response.data){            
     // //  OnSubmitSuccess()
     // //   OnCancelBtnClick()
-   
     // }
-    alert("Details Updated");
+    // alert("Details Updated");
     });
     
   };
