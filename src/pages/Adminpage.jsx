@@ -71,7 +71,7 @@ const Adminpage = () => {
       </div>
 
       {users.length > 0 ? (
-        <div className="Display-usersSection">
+        <div className="Display-usersSection grid grid-cols-3 rounded-xl">
           {users.map((items) => (
             <div className="card">
               <div className="user-display" key={items?.id}>

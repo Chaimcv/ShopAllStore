@@ -1,11 +1,12 @@
 .not{
-    background-color: rgb(240, 237, 237);
+   
     height:auto;
 }
 .Display-usersSection{
-      background-color: rgb(240, 237, 237);
+     
       border-radius: 25%;
     margin-top: 5%;
+
 }
 .View,.Delete{
     background-color: black;
@@ -28,17 +29,14 @@
     flex-direction: row;
     justify-content: center;   
     padding: 10px;
+    border-radius: 10px;
    
-/* }
+}
 .user-display{
-    display: flex;
-    flex-direction: row;
-    justify-content: left; */
+  
+ background-color: rgb(240, 237, 237);
+}
 
-}
-.user-images{
-    width: 25%;
-}
 h3{
     padding: 5px;
 }
@@ -47,8 +45,9 @@ h3{
    background-color: rgb(172, 122, 219);
    height: 45%;
    width: 25%;
+   align-content: center;
 }
 .user-info{
-    background-color: aliceblue;
-    width:25%;
+    background-color: rgb(230, 227, 227);
+    
 }
