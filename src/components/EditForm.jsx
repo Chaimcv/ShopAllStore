@@ -8,9 +8,6 @@ const EditForm = ({OnEditSuccess,EditId}) => {
  const [edits, setEdits] = useState([]);
   const baseUrl = process.env.REACT_APP_ADMIN_URL;
   console.log(baseUrl, "baseurl");
- 
-
-//   const [datta, setResdata] = useState();
 
   const [name, setName] = useState();
   const [age, setAge] = useState();
