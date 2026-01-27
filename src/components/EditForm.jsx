@@ -45,8 +45,7 @@ const EditForm = ({OnEditSuccess,EditId}) => {
     // alert("Details Updated");
     });
     
-  };
-  
+  }; 
   return (
     <div className="Edit-btn" id="EditUserSection">
       <label for="Name">
@@ -111,7 +110,6 @@ const EditForm = ({OnEditSuccess,EditId}) => {
        <br /><br />
        <button onClick={EditUser}>Update</button>
     </div>
-
 )}
     
  
