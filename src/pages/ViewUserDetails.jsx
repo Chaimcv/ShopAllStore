@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
+import "../App.css";
 import "./ViewUserDetails.css";
 import User from '../components/AddUserForm';
 import UserForm from '../components/AddUserForm';
