@@ -46,10 +46,10 @@ console.log(userdetails,"userdetails-console");
         <div>
          <div className='viewuserdiv'>
            <div> <img src={userdetails?.userimage} className='w-[20%] h-[20%]' alt='userimage' /></div>
-          <h3 >Age:{userdetails?.age}</h3>
-         <h2>Phone Number:{userdetails?.pnumber}</h2>
-          <h3 >Email:{userdetails?.email}</h3>
-          <p>Address:{userdetails?.address}</p>
+          <h3 >Age: {userdetails?.age}</h3>
+         <h2>Phone Number: {userdetails?.pnumber}</h2>
+          <h3 >Email: {userdetails?.email}</h3>
+          <p>Address: {userdetails?.address}</p>
           </div>
           </div>
     </div>
