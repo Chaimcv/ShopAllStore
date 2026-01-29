@@ -73,7 +73,7 @@ console.log(data,"data");
        <img className="image w-[60%] h-[60%] mx-auto "src={items?.image}></img>
        <p>₹{items?.price}</p>
        <Link to={`/details/${items.id}`}><button className='bg-black text-white m-1 rounded-2xl'>View Details</button></Link>
-       <button className='bg-black text-white m-1' onClick={()=>Addtocart(items)}>Add to cart</button>
+       <button className='bg-black text-white m-1 rounded-2xl' onClick={()=>Addtocart(items)}>Add to cart</button>
          {/* <Link to="/details">View Details</Link> */}
  
         </div>
@@ -87,7 +87,7 @@ console.log(data,"data");
         <p className='title text-left font-semibold text-base m-[2%]'>{items?.title}</p><br/>
        <img className="image w-[60%] h-[60%] mx-auto "src={items?.image}></img>
        <p>₹{items?.price}</p>
-       <Link to={`/details/${items.id}`}><button>View Details</button></Link><br />
+       <Link to={`/details/${items.id}`}><button >View Details</button></Link><br />
         <button  onClick={()=>Addtocart(items)}>Add to cart</button>
          
  
