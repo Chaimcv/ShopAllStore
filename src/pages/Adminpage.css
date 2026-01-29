@@ -23,7 +23,7 @@
     margin-left: 1000px;
     color: white;
 }
-.card{
+.admin-card{
     background-color: white;
     display:flex;
     flex-direction: row;
