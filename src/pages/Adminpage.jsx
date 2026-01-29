@@ -73,7 +73,7 @@ const Adminpage = () => {
       {users.length > 0 ? (
         <div className="Display-usersSection grid grid-cols-4 rounded-xl">
           {users.map((items) => (
-            <div className="card">
+            <div className="admin-card">
               <div className="user-display" key={items?.id}>
                 <div className="user-images">
                   <img
