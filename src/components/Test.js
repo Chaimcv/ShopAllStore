@@ -73,7 +73,7 @@ console.log(data,"data");
        <img className="image w-[60%] h-[60%] mx-auto "src={items?.image}></img>
        <p>₹{items?.price}</p>
        <Link to={`/details/${items.id}`}><button className='bg-black text-white m-1'>View Details</button></Link>
-       <button className='bg-black text-white' onClick={()=>Addtocart(items)}>Add to cart</button>
+       <button className='bg-black text-white m-1' onClick={()=>Addtocart(items)}>Add to cart</button>
          {/* <Link to="/details">View Details</Link> */}
  
         </div>
