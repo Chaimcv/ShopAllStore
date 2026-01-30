@@ -10,8 +10,6 @@ const Adminpage = () => {
   const navigate = useNavigate();
   const baseUrl = process.env.REACT_APP_ADMIN_URL;
 
-  //  console.log(url,"url");
-
   const [users, setUsers] = useState([]); //to display users in adminpage
   // const users=[{name: "eeeee",email: "ff@gmail.com",age:"22"},
   //              {name: "fff",email: "ee@gmail.com",age:"23"}];
