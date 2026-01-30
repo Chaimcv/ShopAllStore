@@ -34,8 +34,6 @@ const Adminpage = () => {
 
   console.log(users, "users");
 
- 
-
   useEffect(() => {
     employee();
   }, []);
