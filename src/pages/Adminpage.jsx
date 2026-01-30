@@ -8,6 +8,7 @@ import AddUserForm from "../components/AddUserForm";
 
 const Adminpage = () => {
   const navigate = useNavigate();
+  
   const baseUrl = process.env.REACT_APP_ADMIN_URL;
 
   const [users, setUsers] = useState([]); //to display users in adminpage
