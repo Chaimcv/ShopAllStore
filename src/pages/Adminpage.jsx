@@ -11,8 +11,7 @@ const Adminpage = () => {
   const baseUrl = process.env.REACT_APP_ADMIN_URL;
 
   const [users, setUsers] = useState([]); //to display users in adminpage
-  // const users=[{name: "eeeee",email: "ff@gmail.com",age:"22"},
-  //              {name: "fff",email: "ee@gmail.com",age:"23"}];
+  
   const [formvisible, setFormvisible] = useState(false); //to set the visibility of form--numbering steps 1
   console.log(formvisible, "formvisibility false");
 
