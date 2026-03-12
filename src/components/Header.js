@@ -85,8 +85,20 @@ const Header = ({ cartdata=[], loginuser={} }) => {
             <img src={require("./assets/cart.png")} alt="shop.co" />
             <h6 className="border border-double  rounded-full w-6">{number}</h6>
           </span>
-          <img src="{test}" alt="userimage" className="h-[50%] w-[50%]" />
-          <img src={require("./assets/Frame (3).png")} alt="shop.co" />
+
+           {loginuser ? (
+  <img src={test} alt="userimage" className="h-[50%] w-[50%]" />
+) : (
+  <button
+    onClick={() => navigate("/login")}
+    className="bg-black text-white px-3 py-1 rounded"
+  >
+    Login
+  </button>
+)}
+
+          {/* <img src="{test}" alt="userimage" className="h-[50%] w-[50%]" />
+          <img src={require("./assets/Frame (3).png")} alt="shop.co" /> */}
         </div>
       </div>
     </>
