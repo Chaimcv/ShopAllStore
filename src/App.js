@@ -44,8 +44,8 @@ function App() {
        <Addingtocart.Provider value={cart}>
       <BrowserRouter>
       {/* <Header /> */}
-        {/* {accessToken ? (<Header cartdata={cart} loginuser={user} />):(<Header />)} */}
-         {accessToken && (<Header cartdata={cart} loginuser={user} />)}
+        {accessToken ? (<Header cartdata={cart} loginuser={user} />):(<Header />)}
+         {/* {accessToken && (<Header cartdata={cart} loginuser={user} />)} */}
         <Routes>
           <>
            <Route path="/admin/*" element={<AdminRoutes />} />
