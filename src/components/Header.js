@@ -5,7 +5,7 @@ import Cart from "../pages/Cart";
 import { Link, useNavigate } from "react-router-dom";
 
 
-const Header = ({ cartdata, loginuser }) => {
+const Header = ({ cartdata=[], loginuser={} }) => {
   console.log(loginuser, "loginuserdata");
   console.log(cartdata, "cartdata");
 
