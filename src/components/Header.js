@@ -53,7 +53,22 @@ const Header = ({ cartdata=[], loginuser={} }) => {
                 {number}
               </h6>
             </span>
-            <img src={test} alt="userimage" className="h-[50%] w-[50%]" />
+
+
+
+            {loginuser ? (
+  <img src={test} alt="userimage" className="h-[50%] w-[50%]" />
+) : (
+  <button
+    onClick={() => navigate("/login")}
+    className="bg-black text-white px-3 py-1 rounded"
+  >
+    Login
+  </button>
+)}
+
+
+            {/* <img src={test} alt="userimage" className="h-[50%] w-[50%]" /> */}
             {/* <img src={require("./assets/Frame (3).png")} alt="shop.co" /> */}
           </div>
         </div>
