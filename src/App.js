@@ -43,7 +43,8 @@ function App() {
     <div className="App">
        <Addingtocart.Provider value={cart}>
       <BrowserRouter>
-        {accessToken && <Header cartdata={cart} loginuser={user} />}
+      {/* <Header /> */}
+        {accessToken ? (<Header cartdata={cart} loginuser={user} />):(<Header />)}
         <Routes>
           <>
            <Route path="/admin/*" element={<AdminRoutes />} />
