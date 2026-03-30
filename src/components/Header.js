@@ -9,8 +9,10 @@ const Header = ({ cartdata=[], loginuser={} }) => {
   console.log(loginuser, "loginuserdata");
   console.log(cartdata, "cartdata");
 
-  const test = loginuser.userimage;
-  console.log(test, "loginuserimage");
+  // const test = loginuser.userimage;
+  // console.log(test, "loginuserimage");
+  const isLoggedIn = loginuser;
+const userImage = loginuser?.userimage;
 
   const number = cartdata.length; //to display the number of items in cart icon
   console.log(number, "number");
@@ -20,6 +22,11 @@ const Header = ({ cartdata=[], loginuser={} }) => {
     console.log("testingnav");
     navigate("/cart");
   };
+
+  const logout = () => {
+  localStorage.removeItem("userdata"); 
+  window.location.reload();   // forces header to update  
+};
 
   return (
     <>
@@ -41,7 +48,7 @@ const Header = ({ cartdata=[], loginuser={} }) => {
             <button>On Sale</button>
             <button>New Arrivals</button>
             <button>Brands</button>
-            <input type="text" placeholder="search"></input>
+            <input type="text" placeholder="search" className="h-[50%] rounded-3xl p-2"></input>
             <span className="w-[20%] relative">
               {/* <Link to="/cart"> */}
               <button onClick={cartbtn}>
@@ -54,19 +61,41 @@ const Header = ({ cartdata=[], loginuser={} }) => {
               </h6>
             </span>
 
-
-
-            {loginuser ? (
-  <img src={test} alt="userimage" className="h-[50%] w-[50%]" />
+            {/* {test ? (
+  <img src={test} className="h-[50%] w-[50%]" />
 ) : (
   <button
     onClick={() => navigate("/login")}
-    className="bg-black text-white px-3 py-1 rounded"
+    className="bg-black text-white rounded-full"
+  >
+    Login
+  </button>
+)} */}
+
+
+{isLoggedIn ? (
+  <div className="flex items-center gap-3">
+    <img
+      src={userImage}
+      alt="user"
+      className="w-10 h-10 rounded-full object-cover"
+    />
+
+    <button
+      onClick={logout}
+      className="bg-black text-white px-3 py-1 rounded-full"
+    >
+      Logout
+    </button>
+  </div>
+) : (
+  <button
+    onClick={() => navigate("/login")}
+    className="bg-black text-white px-4 py-1 rounded-full"
   >
     Login
   </button>
 )}
-
 
             {/* <img src={test} alt="userimage" className="h-[50%] w-[50%]" /> */}
             {/* <img src={require("./assets/Frame (3).png")} alt="shop.co" /> */}
@@ -86,7 +115,7 @@ const Header = ({ cartdata=[], loginuser={} }) => {
             <h6 className="border border-double  rounded-full w-6">{number}</h6>
           </span>
 
-           {loginuser ? (
+           {/* {test ? (
   <img src={test} alt="userimage" className="h-[50%] w-[50%]" />
 ) : (
   <button
@@ -95,7 +124,7 @@ const Header = ({ cartdata=[], loginuser={} }) => {
   >
     Login
   </button>
-)}
+)} */}
 
           {/* <img src="{test}" alt="userimage" className="h-[50%] w-[50%]" />
           <img src={require("./assets/Frame (3).png")} alt="shop.co" /> */}
