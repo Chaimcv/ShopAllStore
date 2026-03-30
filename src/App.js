@@ -45,7 +45,6 @@ function App() {
            
             
       <BrowserRouter>
-      {/* <Header /> */}
         {accessToken ? (<Header cartdata={cart} loginuser={user} />):(<Header />)}
          {/* {accessToken && (<Header cartdata={cart} loginuser={user} />)} */}
         <Routes>
