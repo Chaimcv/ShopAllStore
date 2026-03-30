@@ -91,7 +91,7 @@ const userImage = loginuser?.userimage;
 ) : (
   <button
     onClick={() => navigate("/login")}
-    className="bg-black text-white px-4 py-1 rounded-full"
+    className="bg-black text-white rounded-full"
   >
     Login
   </button>

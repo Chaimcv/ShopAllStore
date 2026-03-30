@@ -42,11 +42,14 @@ function App() {
   return (
     <div className="App">
        <Addingtocart.Provider value={cart}>
+           
+            
       <BrowserRouter>
       {/* <Header /> */}
         {accessToken ? (<Header cartdata={cart} loginuser={user} />):(<Header />)}
          {/* {accessToken && (<Header cartdata={cart} loginuser={user} />)} */}
         <Routes>
+              <Route path="/login" element={<Login />} />
           <>
            <Route path="/admin/*" element={<AdminRoutes />} />
            {/* <Route path="/view" element={<ViewUserDetails />} />
@@ -65,7 +68,7 @@ function App() {
             {/* <Route path="/cart" element={<Cart Cartdisplay={cart}/>} /> */}
            
             <Route path="/home" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            {/* <Route path="/login" element={<Login />} /> */}
             <Route path="/cart" element={<Cart />} />
            
           </>
