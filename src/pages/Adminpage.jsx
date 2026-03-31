@@ -45,7 +45,6 @@ const Adminpage = () => {
     });
     setFormvisible(false);
   };
-
   return (
     <div className="not text-black">
       {formvisible && (
