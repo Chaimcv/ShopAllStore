@@ -30,7 +30,6 @@ const Adminpage = () => {
     alert("Deleted");
     employee();
   };
-
   console.log(users, "users");
 
   useEffect(() => {
