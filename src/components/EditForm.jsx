@@ -14,8 +14,7 @@ const EditForm = ({OnEditSuccess,EditId}) => {
   const [email, setEmail] = useState();
   const [pnumber, setPhonenumber] = useState();
    const [userimage, setUserimage] = useState();
-    const [address, setAddress] = useState();
-
+    const [address, setAddress] = useState()
 
      const Datasadded = {
     name,
